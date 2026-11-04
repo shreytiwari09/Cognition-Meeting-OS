@@ -1,0 +1,157 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ╔══════════════════════════════════════════════════════════════════╗
+    // ║  HELPER FUNCTIONS                                               ║
+    // ╚══════════════════════════════════════════════════════════════════╝
+
+    // Returns true if the request is from an authenticated user
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Returns true if the authenticated user is the document owner
+    function isOwner(uid) {
+      return isAuthenticated() && request.auth.uid == uid;
+    }
+
+    // Returns the current user's profile document data
+    function getUserProfile() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    // Returns true if the user belongs to the specified company
+    function belongsToCompany(companyId) {
+      return isAuthenticated() && getUserProfile().companyId == companyId;
+    }
+
+    // Returns true if the field has not been modified in this write
+    function fieldUnchanged(field) {
+      return !(field in request.resource.data)
+          || request.resource.data[field] == resource.data[field];
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════╗
+    // ║  USERS COLLECTION                                               ║
+    // ║  /users/{uid}                                                   ║
+    // ║                                                                 ║
+    // ║  Every authenticated user can read and update ONLY their own     ║
+    // ║  user document. No user can ever read or modify another user's   ║
+    // ║  document.                                                      ║
+    // ╚══════════════════════════════════════════════════════════════════╝
+
+    match /users/{uid} {
+
+      // READ: A user can only read their OWN document.
+      // Prevents any user from reading another user's profile, email,
+      // role, or company association.
+      allow read: if isOwner(uid);
+
+      // CREATE: A user can create their own bare profile during signup.
+      // Constraints:
+      //   - Must be their own UID (isOwner)
+      //   - Only name, email and createdAt: NO role and NO companyId.
+      //     Both are written exclusively by the backend (Admin SDK) when the
+      //     user creates a company (→ pm) or redeems an invite code (→ employee).
+      //   - Email must match their Firebase Auth email (prevents spoofing)
+      allow create: if isOwner(uid)
+                    && request.resource.data.keys().hasAll(['name', 'email', 'createdAt'])
+                    && request.resource.data.keys().hasOnly(['name', 'email', 'createdAt'])
+                    && request.resource.data.email == request.auth.token.email
+                    && request.resource.data.createdAt == request.time;
+
+      // UPDATE: A user may only change their display name.
+      // role, email and companyId can never be changed from the client, which
+      // prevents privilege escalation and joining a company without an invite.
+      allow update: if isOwner(uid)
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'updatedAt'])
+                    && request.resource.data.updatedAt == request.time;
+
+      // DELETE: Users cannot delete their own profiles from the client.
+      // Account deletion should be handled by a Cloud Function or admin action.
+      allow delete: if false;
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════╗
+    // ║  COMPANIES COLLECTION                                           ║
+    // ║  /companies/{companyId}                                         ║
+    // ║                                                                 ║
+    // ║  Creating and joining companies is handled by the backend.      ║
+    // ║  Clients can only read their own company doc and its chat.      ║
+    // ╚══════════════════════════════════════════════════════════════════╝
+
+    match /companies/{companyId} {
+
+      // READ (get): Only company members can read their own company doc.
+      // The belongsToCompany() helper verifies the user's companyId matches.
+      // Enforces company isolation — users cannot read other companies.
+      allow get: if belongsToCompany(companyId);
+
+      // READ (list/query): Denied. Invite codes are redeemed through the
+      // backend endpoint POST /companies/join, which uses the Admin SDK.
+      // Firestore rules cannot inspect query where() clauses, so client-side
+      // querying of companies is not secure.
+      allow list: if false;
+
+      // CREATE: Only the backend creates companies (POST /companies), so the
+      // creator is made PM atomically with a server-generated invite code.
+      allow create: if false;
+
+      // UPDATE/DELETE: Companies cannot be modified or deleted from the client.
+      // Company management should be done via Cloud Functions or admin panel.
+      allow update: if false;
+      allow delete: if false;
+
+      // Company Chat Messages
+      match /messages/{messageId} {
+        allow read: if belongsToCompany(companyId);
+        allow create: if belongsToCompany(companyId)
+                      && request.resource.data.senderId == request.auth.uid
+                      && request.resource.data.keys().hasAll(['text', 'senderId', 'senderName', 'senderRole', 'createdAt'])
+                      && request.resource.data.createdAt == request.time;
+      }
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════╗
+    // ║  MEETINGS COLLECTION (TOP-LEVEL)                                ║
+    // ║  /meetings/{meetingId}                                          ║
+    // ║                                                                 ║
+    // ║  All meeting CRUD is performed by the FastAPI backend using the  ║
+    // ║  Firebase Admin SDK, which bypasses security rules entirely.     ║
+    // ║  No client should ever directly access meeting documents.        ║
+    // ╚══════════════════════════════════════════════════════════════════╝
+
+    match /meetings/{meetingId} {
+      allow read, write: if false;
+
+      // Sub-collections (participants, logs) are also backend-only.
+      match /{subcollection=**} {
+        allow read, write: if false;
+      }
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════╗
+    // ║  TASKS COLLECTION (TOP-LEVEL)                                   ║
+    // ║  /tasks/{taskId}                                                ║
+    // ║                                                                 ║
+    // ║  All task operations (creation by CrewAI, status updates,       ║
+    // ║  validation) are performed through the FastAPI backend API.      ║
+    // ║  The frontend uses Axios → backend, not Firestore directly.     ║
+    // ╚══════════════════════════════════════════════════════════════════╝
+
+    match /tasks/{taskId} {
+      allow read, write: if false;
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════╗
+    // ║  CATCH-ALL: Deny everything else                                ║
+    // ║  Any collection not explicitly listed above is denied by         ║
+    // ║  default. This is the principle of least privilege.              ║
+    // ╚══════════════════════════════════════════════════════════════════╝
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

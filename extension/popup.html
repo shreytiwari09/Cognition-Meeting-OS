@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 340px; background: #0a0a0f; color: #e5e5e5; font: 13px/1.45 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .header { display: flex; align-items: center; gap: 10px; background: #111118; padding: 14px 16px; border-bottom: 1px solid #222; }
+    .header img { width: 26px; height: 26px; }
+    .header h1 { font-size: 14px; font-weight: 600; color: #fff; }
+    .header p { font-size: 11px; color: #777; }
+    .header .link { margin-left: auto; font-size: 11px; color: #777; background: none; border: 0; cursor: pointer; }
+    .header .link:hover { color: #f87171; }
+    .body { padding: 14px 16px 16px; }
+    .card { background: #111; border: 1px solid #222; border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+    .status { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #555; flex-shrink: 0; }
+    .dot.rec { background: #ef4444; box-shadow: 0 0 6px #ef444488; animation: blink 1.4s infinite; }
+    .dot.ok { background: #22c55e; } .dot.warn { background: #f59e0b; } .dot.purple { background: #a78bfa; }
+    @keyframes blink { 50% { opacity: .35 } }
+    .muted { color: #777; font-size: 12px; }
+    .warn-text { color: #fbbf24; font-size: 12px; margin-top: 6px; }
+    .err-text { color: #f87171; font-size: 12px; margin-top: 6px; }
+    label.field { display: block; font-size: 11px; color: #777; margin: 10px 0 4px; }
+    input[type=text], textarea { width: 100%; background: #0d0d14; border: 1px solid #2a2a35; border-radius: 6px; padding: 7px 9px; color: #fff; font-size: 12px; outline: none; }
+    input[type=text]:focus, textarea:focus { border-color: #7c3aed; }
+    .chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+    .chip { background: #1e1b4b; color: #c4b5fd; border-radius: 999px; padding: 2px 8px; font-size: 11px; }
+    .preview { margin-top: 8px; font-size: 11px; color: #9ca3af; border-left: 2px solid #4c1d95; padding-left: 8px; max-height: 64px; overflow: hidden; white-space: pre-line; }
+    .row { display: flex; gap: 8px; margin-top: 10px; }
+    .btn { flex: 1; padding: 8px; border: 0; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; color: #fff; background: #7c3aed; }
+    .btn:disabled { opacity: .45; cursor: not-allowed; }
+    .btn.secondary { background: #1f2937; color: #d1d5db; }
+    .btn.danger { background: #7f1d1d; }
+    .section { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: .06em; margin: 14px 0 6px; }
+    .capture { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #1a1a22; font-size: 12px; }
+    .capture .t { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .capture button { background: #1f2937; color: #c4b5fd; border: 0; border-radius: 5px; padding: 3px 8px; font-size: 11px; cursor: pointer; }
+    .toggle { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; font-size: 12px; color: #ccc; }
+    .toggle input { accent-color: #7c3aed; }
+    details summary { cursor: pointer; color: #777; font-size: 12px; margin-top: 12px; }
+    .audio { margin-top: 10px; padding-top: 10px; border-top: 1px solid #222; }
+    .audio .on { color: #86efac; font-size: 12px; font-weight: 600; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon48.png" alt="">
+    <div>
+      <h1>Cognition MeetingOS</h1>
+      <p id="who">Not connected</p>
+    </div>
+    <button class="link hidden" id="btnDisconnect">Disconnect</button>
+  </div>
+
+  <div class="body">
+    <!-- Not connected -->
+    <div id="connectView" class="hidden">
+      <div class="card">
+        <p style="font-weight:600;margin-bottom:6px" id="connectTitle">Connect your account</p>
+        <p class="muted">One click links this extension to your MeetingOS account. After that, meetings are captured
+          automatically when you join a Google Meet, and sent to your AI agents when it ends.</p>
+        <div class="row"><button class="btn" id="btnConnect">Connect account</button></div>
+      </div>
+    </div>
+
+    <!-- Connected -->
+    <div id="mainView" class="hidden">
+      <div class="card" id="meetCard">
+        <div class="status"><span class="dot" id="dot"></span><span id="statusText">…</span></div>
+        <p class="muted" id="statusHint"></p>
+        <p class="warn-text hidden" id="captionsWarn">Captions are off. Turn on captions (CC) in Meet so MeetingOS can listen.</p>
+        <p class="err-text hidden" id="errorText"></p>
+
+        <div id="audioBox" class="audio hidden">
+          <p class="on hidden" id="audioOn"></p>
+          <button class="btn hidden" id="btnAudio">Use call audio for accuracy</button>
+          <p class="muted" id="audioHint" style="margin-top:6px">Meet's captions often mishear names and terms. This transcribes the other people's
+            voices with Whisper instead (captions still tell who spoke). Chrome shows a sharing icon on the tab.</p>
+          <p class="err-text hidden" id="audioError"></p>
+        </div>
+
+        <div id="captureDetails" class="hidden">
+          <label class="field" for="title">Meeting title</label>
+          <input type="text" id="title">
+          <div class="chips" id="speakers"></div>
+          <div class="preview" id="preview"></div>
+        </div>
+
+        <div class="row">
+          <button class="btn secondary hidden" id="btnStart">Start recording</button>
+          <button class="btn secondary hidden" id="btnStop">Stop</button>
+          <button class="btn hidden" id="btnSend">Send to MeetingOS</button>
+          <button class="btn hidden" id="btnOpen">Open in MeetingOS</button>
+        </div>
+      </div>
+
+      <div id="recentWrap" class="hidden">
+        <div class="section">Recent captures</div>
+        <div id="recent"></div>
+      </div>
+
+      <div class="section">Settings</div>
+      <label class="toggle">Start recording when I join a call <input type="checkbox" id="autoRecord"></label>
+      <label class="toggle">Turn on Meet captions automatically <input type="checkbox" id="autoCaptions"></label>
+      <label class="toggle">Send automatically when the call ends <input type="checkbox" id="autoSend"></label>
+
+      <details>
+        <summary>Paste a transcript instead</summary>
+        <textarea id="pasteText" rows="5" style="margin-top:8px" placeholder="Rahul: I will complete the API by Monday&#10;Priya: I will review designs by Wednesday"></textarea>
+        <input type="text" id="pasteTitle" placeholder="Meeting title" style="margin-top:6px">
+        <div class="row"><button class="btn" id="btnPaste">Send pasted transcript</button></div>
+      </details>
+    </div>
+  </div>
+  <script src="captions.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

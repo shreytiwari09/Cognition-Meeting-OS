@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-high":"#e9e8e3","tertiary":"#5f5e61","primary-fixed-dim":"#ffb5a0","on-tertiary":"#ffffff","surface":"#faf9f4","inverse-on-surface":"#f2f1ec","on-error-container":"#93000a","surface-dim":"#dbdad5","on-primary-container":"#541200","on-background":"#1b1c19","background":"#faf9f4","secondary":"#006d30","surface-tint":"#b02f00","on-primary":"#ffffff","tertiary-container":"#929094","outline-variant":"#e4beb4","surface-container":"#efeee9","surface-variant":"#e3e3de","error-container":"#ffdad6","primary":"#b02f00","surface-container-low":"#f5f4ef","on-tertiary-container":"#2a292d","error":"#ba1a1a","surface-container-highest":"#e3e3de","secondary-container":"#92f5a4","primary-container":"#ff5722","tertiary-fixed":"#e4e1e6","secondary-fixed-dim":"#79db8d","outline":"#907067","tertiary-fixed-dim":"#c8c5ca","inverse-surface":"#30312e","on-surface":"#1b1c19","on-secondary-container":"#007233","secondary-fixed":"#95f8a7","on-error":"#ffffff","on-tertiary-fixed":"#1b1b1e","on-secondary":"#ffffff","on-primary-fixed-variant":"#862200","surface-bright":"#faf9f4","inverse-primary":"#ffb5a0","on-primary-fixed":"#3b0900","on-secondary-fixed-variant":"#005323","primary-fixed":"#ffdbd1","on-tertiary-fixed-variant":"#47464a","on-secondary-fixed":"#00210a","on-surface-variant":"#5b4039","surface-container-lowest":"#ffffff"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-2xl":"2.5rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","margin-mobile":"1rem","space-xl":"2rem","space-md":"1rem","gutter":"1.25rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"2rem"},"fontFamily":{"label-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface z-50 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm py-space-xs"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight leading-none">Cognition</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim tracking-wider uppercase mt-1">MeetingOS</span></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-lowest text-on-surface shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="dashboard-meetings" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Meetings</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="team-performance" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Team Performance</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="my-work" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span>My Work</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="extension" href="#"><span class="material-symbols-outlined text-[20px]">extension</span><span>Extension</span></a></nav></div><div class="flex flex-col gap-space-md"><div class="bg-surface-container-highest/10 rounded-lg p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>Neural Synthesizer</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">v3.4</span></div><p class="font-body-sm text-body-sm text-tertiary-fixed leading-tight">98.4% speech-to-intent fidelity in real-time executive sync.</p></div><div class="flex items-center justify-between bg-surface-container-highest/15 rounded-full p-space-xs pr-space-md"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz6E2HyF4zkwSMgEDl_GGo4uw1aN_ADxsvXfzA121t5kUucyGbY3IyQ7UwUhs8tQAclNk180OKpQYduPh7lo599_VFzVtlggKfEimldLu2qilouQpzHhe3Aw44h1vgi96XDDSlYPq6QfAXlpAG0olA726sZvvdLuXwiuD1ZBvTOt3FvY60AjC11n-cJMBDok2vK3uopfdolW7MAWVPkbUvoYADukxZSW9Ach_Lu41Hf463bIvqfwCKtQ"/></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-inverse-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim leading-none">VP Operations</span></div></div><span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">unfold_more</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen bg-surface"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-tertiary">Cognition Core</span><span class="text-tertiary-container">/</span><span class="font-label-lg text-label-lg text-on-surface">Executive Command Space</span></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>AI Engine Active</span></div><button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Session</span></button><div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQS3_PpUT2GdVJXyh4OpssrGnhXWh_bW6FXAEoNKtEK9OC1hVWRwY3BmWerlmq2Yh0PQeNh5pt6gLQeJKBm4YHsEcAxCM08b7NfNzCzBUuHsfJ5SFO1Jo6y7CaEjgKdV19cWXVcFNhhcW7CmsvnoVWn-eU1fP5TRa7fcXeEg0gLYW-QEhP43euGNCaUpvRduQacgdNaJW4ldS-n2kK6aA6JDLM4D7AONQUhe7XMwTUFmkQF0CWbYYew"/></div></div></div></header><main class="w-full pt-16 bg-surface px-space-xl pb-space-2xl"><div class="flex flex-col w-full">
+<!-- Top Command Strip & Page Action Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs text-tertiary mb-1">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Autonomous Intelligence Layer</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Meetings &amp; Transcripts</h1>
+<p class="font-body-md text-body-md text-tertiary mt-1 max-w-2xl">
+        All executive sessions transcribed, cross-audited for contradictory commitments, and transformed into auditable execution tickets.
+      </p>
+</div>
+<!-- Right Quick Actions -->
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="flex items-center gap-1.5 px-space-md py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg shadow-sm transition-all duration-150" id="refreshBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">refresh</span>
+<span>Refresh</span>
+</button>
+<button class="flex items-center gap-2 px-space-lg py-2.5 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg shadow-md transition-all duration-200 transform hover:-translate-y-0.5" id="toggleUploadBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+<span>Upload Transcript</span>
+</button>
+</div>
+</div>
+<!-- Collapsible Upload Panel (Triggered by button) -->
+<div class="hidden mb-space-xl bg-surface-container-lowest rounded-lg p-space-xl shadow-[0_8px_30px_-4px_rgba(24,24,27,0.04)]" id="uploadPanel">
+<div class="flex items-center justify-between pb-space-md mb-space-lg border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">auto_read_pause</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Direct Transcript Ingestion</h3>
+<p class="font-body-sm text-body-sm text-tertiary">Our 7-agent pipeline will validate speaker timelines and extract action items.</p>
+</div>
+</div>
+<button class="text-tertiary hover:text-on-surface" id="closeUploadBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-3 gap-space-lg" onsubmit="event.preventDefault(); alert('Session dispatched to Autonomous Processing Matrix');">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Meeting Title</label>
+<input class="w-full px-space-md py-2.5 rounded-full bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="e.g. Q4 Infrastructure Architecture &amp; Capacity" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Department</label>
+<select class="w-full px-space-md py-2.5 rounded-full bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option>Core Platform &amp; SRE</option>
+<option>Product &amp; Strategic Operations</option>
+<option>Enterprise Sales &amp; Growth</option>
+<option>Executive Leadership</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Participants (comma separated)</label>
+<input class="w-full px-space-md py-2.5 rounded-full bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Elena Vance, Marcus Vance, Sophia Liu" type="text"/>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-tertiary uppercase tracking-wide">Speaker Transcript Raw Text</label>
+<textarea class="w-full p-space-md rounded-2xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Elena Vance [14:02]: We need to migrate the auth proxy by Wednesday before the SOC2 audit starts..." required="" rows="4"></textarea>
+</div>
+<div class="col-span-1 md:col-span-3 flex items-center justify-end gap-space-md">
+<button class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-tertiary hover:text-on-surface" id="cancelUploadBtn" type="button">Cancel</button>
+<button class="px-space-xl py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary transition-colors" type="submit">Start Ingestion Pipeline</button>
+</div>
+</form>
+</div>
+<!-- Bento KPI Grid (Adopting Dribbble Reference 13/15 Hero Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-gutter mb-space-xl">
+<!-- Bento 1: Total Meetings -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg flex flex-col justify-between shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)] hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-tertiary">Total Synced Sessions</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</div>
+</div>
+<div class="mt-space-lg">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">38</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+            +4 this mo
+          </span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2">
+<span class="font-body-sm text-body-sm text-tertiary">Audited across 5 squads</span>
+<!-- Inline Sparkline SVG -->
+<svg class="w-20 h-6 text-secondary" fill="none" viewbox="0 0 80 24">
+<path d="M2 18L18 14L34 16L50 8L66 11L78 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Bento 2: Vibrant Coral Hero Card (Direct Style Reference from Screenshot 13 "Turnover Rate") -->
+<div class="bg-primary-container text-on-primary rounded-lg p-space-lg flex flex-col justify-between shadow-[0_12px_24px_-6px_rgba(255,87,34,0.3)] relative overflow-hidden">
+<!-- Ambient decorative glow -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-white/90">Autonomous Processing</span>
+<span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded-full bg-white/20 text-white font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+          Live
+        </span>
+</div>
+<div class="mt-space-lg relative z-10">
+<div class="font-headline-xl text-headline-xl text-white tracking-tight leading-none mb-1">
+          2 Active
+        </div>
+<p class="font-body-sm text-body-sm text-white/80 leading-tight">
+          7 agents evaluating transcripts for task commitments &amp; friction.
+        </p>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-white font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+            LLM Neural Core v4.2
+          </span>
+<span class="font-label-sm text-label-sm text-white/90 underline cursor-pointer hover:text-white">View Queue</span>
+</div>
+</div>
+</div>
+<!-- Bento 3: Completed & Audited (Forest Green Accents) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg flex flex-col justify-between shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)] hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-tertiary">Completed &amp; Audited</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+          98.2% Accuracy
+        </span>
+</div>
+<div class="mt-space-lg">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">35</span>
+<span class="font-label-sm text-label-sm text-tertiary">verified</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden mt-3">
+<div class="bg-secondary h-full rounded-full" style="width: 92%;"></div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-body-sm text-body-sm text-tertiary">Audit verdict clean</span>
+<span class="font-label-sm text-label-sm text-secondary">32 with zero errors</span>
+</div>
+</div>
+</div>
+<!-- Bento 4: Tasks Extracted -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg flex flex-col justify-between shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)] hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-tertiary">Extracted Action Items</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="mt-space-lg">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">142</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+            +28 this wk
+          </span>
+</div>
+<div class="flex items-center gap-space-xs mt-3">
+<div class="flex -space-x-1.5 overflow-hidden">
+<img class="inline-block h-6 w-6 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Corporate headshot of young product manager smiling in professional light studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkSfg2io15bz1I-LNcDq4EkUjewzpzdZnYU2PEZzDnnDRXSHELwJ55dGRAE6G_K5MLM8CkA_GG4aj7eQtsG_HzPV1h5wF4v1aN4wRDtqfd_nMn9yAY3SyUmprtQwWKqLasoevn5lNpUFIs9pHfQysqEJK852iTSqkXBYBwdBg5_J7lvDPZ-JL5AqKnbZZcPU5e19Nn0Fv8X2zCSlUu7_UP0ThOB5expi2ssIR2tNSSl4Il2RIuuXMvZQ"/>
+<img class="inline-block h-6 w-6 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Portrait of senior engineering director wearing round glasses in natural office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1nsYcrdNpI7UDYnI0E9PIzXytHpKSiQd3LD77oEzA94t8mHoRWx2osynq2vcKICukaduCYbg7by_mXcC1k_V1kbZi8jVE3w8g1zJK4lDHPA1DWjsQ_cmFCq2NPbRwofmGk1RF95E7UOt2__Qf6MsiwcZmpoolPCFeTbY3mFu5dGBLLXuygpD3CxEWUCy2BovbdMqXz_ZNrGzImXoL8rVscK9f-bgIcQ6hlBZPOtwEOz2nSsJf-IL3Bw"/>
+<img class="inline-block h-6 w-6 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Portrait of a female UI designer with warm lighting and minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBop_O5g5nz_qXag9PY0BB5xEv6lOqy559IBUSwRsBVEldKkxwpmdSmEKKAINREY4JUAW6W5NXm24LnbONtoXnxNGy9a95LXX5A_0hpVoHOTaX4ZvhF3IlLOyFs6MBy6PZnfNLFWyH-e_cA9QShXe5C0tEPuDPbR1GgLyWPyNjXTZlpucU5A6zr6SRNIEsaZ_gnzFV_DcciCHPYsXPcN6oVloWj4spBASJmuydkK5EGVbs1YGZvTdQvHw"/>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">88% assigned on-time</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Onboarding Progress Bar & Checklist Card (Bento Horizontal) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg mb-space-xl shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)]">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Setup Progress: 2 of 4 Steps Complete</span>
+</div>
+<span class="font-label-md text-label-md text-secondary bg-secondary-container/40 px-space-sm py-1 rounded-full">50% System Readiness</span>
+</div>
+<!-- Segmented progress indicator -->
+<div class="grid grid-cols-4 gap-2 mb-space-md">
+<div class="h-1.5 rounded-full bg-secondary"></div>
+<div class="h-1.5 rounded-full bg-secondary"></div>
+<div class="h-1.5 rounded-full bg-surface-container-high"></div>
+<div class="h-1.5 rounded-full bg-surface-container-high"></div>
+</div>
+<!-- 4 Sub-steps -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Company Registered</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Done</span>
+</div>
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Invite 4 Managers</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">4 Joined</span>
+</div>
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">pending</span>
+<span class="font-label-md text-label-md text-on-surface">Managers Invite Teams</span>
+</div>
+<button class="px-space-xs py-1 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" type="button">
+          Send Reminders
+        </button>
+</div>
+<div class="p-space-sm rounded-DEFAULT bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">radio_button_unchecked</span>
+<span class="font-label-md text-label-md text-on-surface">Auto-Sync Extension</span>
+</div>
+<button class="px-space-xs py-1 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-sm text-label-sm" type="button">
+          Pair Chrome
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Content Mosaic: Session Filter & Dynamic Meeting Feed -->
+<div class="flex flex-col gap-space-md">
+<!-- Controls Bar (Pill Tabs & Search) -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-sm rounded-full shadow-[0_8px_24px_-4px_rgba(24,24,27,0.03)]">
+<!-- Pill Tabs -->
+<div class="flex items-center gap-1 bg-surface-container rounded-full p-1" id="filterTabs">
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm" data-filter="all" type="button">
+          All (38)
+        </button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-md text-label-md text-tertiary hover:text-on-surface transition-colors" data-filter="processing" type="button">
+          Processing (2)
+        </button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-md text-label-md text-tertiary hover:text-on-surface transition-colors" data-filter="completed" type="button">
+          Completed (34)
+        </button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-md text-label-md text-tertiary hover:text-on-surface transition-colors" data-filter="flagged" type="button">
+          Audited Risks (2)
+        </button>
+</div>
+<!-- Search Input -->
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-tertiary">search</span>
+<input class="w-full pl-9 pr-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-tertiary focus:outline-none focus:ring-1 focus:ring-primary-container" id="searchInput" placeholder="Search by title, participant, or tag..." type="text"/>
+</div>
+</div>
+<!-- Meeting Cards List -->
+<div class="grid grid-cols-1 gap-space-md mt-space-xs" id="meetingList">
+<!-- Meeting Card 1 (Active Processing State with Progress Stepper) -->
+<div class="meeting-card bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)] hover:shadow-md transition-all duration-200 cursor-pointer group" data-category="processing">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+</div>
+<div>
+<div class="flex items-center flex-wrap gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Core Platform</span>
+<span class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                  Processing Pipeline
+                </span>
+<span class="font-body-sm text-body-sm text-tertiary">Today, 2:30 PM • 48 min sync</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary-container transition-colors">
+                Q3 Roadmap &amp; Enterprise Architecture Sync
+              </h2>
+</div>
+</div>
+<!-- Right side Attendees and Actions -->
+<div class="flex items-center gap-space-lg flex-shrink-0">
+<div class="flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Marcus Chen, tech lead with clean backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8C1xEtKR0Dzi-97V6RvkWtWDH4XL-r7X80w0-DHOfsa4ghCgAa_pujXrnyuJnRbcYkMCQfSEFT3JcxLqgPgvnRKZXSglh8ZODeDZ3gTII9oMFSkpFROHH_Nm1DgVc0zOsE85KhTrNsEv2d99AjJuc36r2CRBgK5Jf7Uz5v6MB-bdAYypoFdOEZmlwAvHq3sikC3O4ZL3o2R4E8IWjNWHFfVkCVTboA2a1PJ-HPtTEoziRU36XsjeXAg"/>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Priya Patel, principal engineer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSCT7QbODW-UAfyLrSvLgCNoV0ttyAwq_PAK4G-7oePvvKDD5dnE-OryASI6iZeBojCPaXZRnDmh0D2WlXs1SgTklB8ovu98RX3dBCK9nHW9-AcYkqimNl7PHeVoLaGWs-yprSbcdg38ilrw8ITBmnYvI9NVhMqzAIdiLM9DtCMBG3Dhve_SyxG3WJZie8KBIIiIa50AntqDu_oKPoqjHsWEZGOnbZq-22zmNvviR03-WTi-TEwozvoA"/>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of Jordan Alvarez, software architect in warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCe41mD3ZgUrfkumoGCfD9wR5PrZhRvt57msIumKAsw09tCwa_ldGt8kW4pyb3XSYrTTk15SBh7pRYLFL6EUzxMNXXUvaFdSMPTGJrG8UwiLr8shZTvoDBk2sEB7G9JpHfM0yu4rshFvg5Ci7zNgABnLsX05g_4BKbnTK-keAdaZ3zCGYpzu1VuMhEZbUn9-wCSTVjRwnuRU2EgT2z0qneiB85igV9WCsTQ3vso81YF4Sbxm-g2bMicQ"/>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-tertiary border-2 border-surface-container-lowest">
+                +3
+              </div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface block">6 Tasks</span>
+<span class="font-label-sm text-label-sm text-secondary">3 Confirmed</span>
+</div>
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-surface group-hover:translate-x-1 transition-all">chevron_right</span>
+</div>
+</div>
+<!-- Live Autonomous Agent Execution Visualizer -->
+<div class="mt-space-md pt-space-md border-t border-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px] animate-spin">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface">Agent Crew 2: Validation &amp; Linear Task Assignment</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold">68% Done</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 68%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary italic">
+            Currently analyzing: “We commit to delivering the Kafka multi-tenant broker cluster before sprint 44 cutoff.” — Priya Patel
+          </p>
+</div>
+</div>
+<!-- Meeting Card 2 (Completed with High Audit Integrity) -->
+<div class="meeting-card bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)] hover:shadow-md transition-all duration-200 cursor-pointer group" data-category="completed">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<div>
+<div class="flex items-center flex-wrap gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Product &amp; Design</span>
+<span class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Audit Verified
+                </span>
+<span class="font-body-sm text-body-sm text-tertiary">Yesterday, 10:00 AM • 62 min duration</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary-container transition-colors">
+                Customer Advisory Board: AI Task Workflows &amp; Executive Handoff
+              </h2>
+</div>
+</div>
+<div class="flex items-center gap-space-lg flex-shrink-0">
+<div class="flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of Sarah Jenkins executive client wearing blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP-mkycnTuJmfYKWNqFQzK_xVk5EHIQqQCnri42Kwa0R90N80q5-xmDU-L0ln0hWzC4E6hi0DHaAdfaUZDk-E4RXWrMBPzAf9HfW8qzrgPr6qKWfZvcrmsvdtICnt5tidupn2BlQEDRzeaUD4xsXsGSuNyf7g1QoWLNdNz7uZG0dL4Pvtc1iFZmAESgN9-Xg3hIw-2QQ3apJjH_iI8XEbFJanS3yeJPO8Qv9WR7FBBQh3SRHAmZQW8Pg"/>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of David Kim product strategy lead" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGRrpKgwra9rGraIuovU0dVm0R0m6NZjUh0QEqyMhMZAP94oJa4qCmhdNfRJ18LW91g2wJMgtzyrp3lPhHWg9uc3O6kRy8F_rM7SRSi1XI-hM1WkvPNESuiQeyGG6qMnEEqpl_yz-MvXJNQ-AAkjyp_Mvx4UWmSZ2deUQafzd4G3qWOJsOsTaGUVW1Cow632Vctmfwo9yyl1G4SyhNetIvzOwDtfoIBh_BAsn-HQt5n6bOql4VnShQNg"/>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-tertiary border-2 border-surface-container-lowest">
+                +5
+              </div>
+</div>
+<div class="flex items-center gap-space-md text-right">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">8 Tasks</span>
+<span class="font-label-sm text-label-sm text-tertiary">5 Decisions</span>
+</div>
+<div class="hidden sm:block px-space-xs py-1 rounded-DEFAULT bg-surface-container text-on-surface font-label-sm text-label-sm">
+                1 Risk Flagged
+              </div>
+</div>
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-surface group-hover:translate-x-1 transition-all">chevron_right</span>
+</div>
+</div>
+<!-- Evidence Quote Excerpt Bar -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2 text-body-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-primary-container">format_quote</span>
+<span class="italic">“Enterprise customers require explicit audit trails before approving automated task creation.” — David Kim</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Summary Synthesized</span>
+</div>
+</div>
+</div>
+<!-- Meeting Card 3 (Sprint Retrospective) -->
+<div class="meeting-card bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)] hover:shadow-md transition-all duration-200 cursor-pointer group" data-category="completed">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-on-surface-variant flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div>
+<div class="flex items-center flex-wrap gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Engineering</span>
+<span class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Completed
+                </span>
+<span class="font-body-sm text-body-sm text-tertiary">Oct 1, 2026 • 35 min sync</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary-container transition-colors">
+                Sprint 42 Retrospective &amp; Blameless Post-Mortem
+              </h2>
+</div>
+</div>
+<div class="flex items-center gap-space-lg flex-shrink-0">
+<div class="flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of Alex Mercer lead DevOps engineer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALj_CSy9x12yNb6B9wlaSoApGq77QAV7ZLFBg01WgwAjAdO_lx-_y73XaCXv6IVv8XwpXEYRdmgwPJAK4wCIH3Q3KWCxjcH-AiLJIajQE5PXB7F2uRGUrbsGKVXbDZUkL0tUGMHNTYMcZTD4WtyELDlOrXH-SA7s0b4NpqD-qIQ6tYM6TKXrdt4yeClT2CMiXEjCxh5HLsXuwyQNpdWihqcrZ9z9bS9fbQN8x658PsVwvJ3xwyRoysIQ"/>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of Hannah Smith QA specialist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW8KcY2haHV9veK1XVK1o3A4c3H5iv4EU0uZUUdz8B__PEJwp1dnAq0mN1Y4HPdM0P87SJWoUuufIJjjopNWUNzPBACBu9SSj1VXOWvfLWMO23Aqn-vHmzYLb6hFLxoO_j74UUzb9M380X7c-9QKJyGJjo0o1OvLZJWJL9qjny2RUIGAtgaCSTng1GJH9ZlNMJMU59sRIRB289vHMM-5rh_seMNTPdTZELognC9WDuuJIESzxJ3MbVrQ"/>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface block">12 Tasks</span>
+<span class="font-label-sm text-label-sm text-tertiary">4 Decisions</span>
+</div>
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-surface group-hover:translate-x-1 transition-all">chevron_right</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2 text-body-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-primary-container">format_quote</span>
+<span class="italic">“Redis fallback will now trigger automatic read-only replication within 400ms.” — Alex Mercer</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">100% Tasks Assigned</span>
+</div>
+</div>
+<!-- Meeting Card 4 (Weekly Leadership Standup) -->
+<div class="meeting-card bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_8px_30px_-4px_rgba(24,24,27,0.03)] hover:shadow-md transition-all duration-200 cursor-pointer group" data-category="completed">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-on-surface-variant flex-shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<div>
+<div class="flex items-center flex-wrap gap-2">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Executive</span>
+<span class="flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Completed
+                </span>
+<span class="font-body-sm text-body-sm text-tertiary">Sep 29, 2026 • 50 min sync</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary-container transition-colors">
+                Weekly Executive Leadership Standup &amp; Capital Allocation
+              </h2>
+</div>
+</div>
+<div class="flex items-center gap-space-lg flex-shrink-0">
+<div class="flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of CEO Elena Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsC4Ee-v24da8u6duLNXa51oM2TJoH5tEZB74Yt39hMq99SKOTXQ5NC2Va-TDaUYt4wez20tyvuNXQ8Y6n7MfjKkOw-iKX2Hk4qSeNzp2A-Yi-SAeGz15ofLYXqlpCFxpfWb6QSYmL--hguVWDS9X2Ektz6yLBR6jyPCMZYAV6EVwbgPhUGUzSzuwcXtub-s44rgVzdYyh7NYw_bl2M5BpGDcuZ2yZ60RePPXts9_6JUo0McNZCxsJEA"/>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of CFO Marcus Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAskDAo5_qR18nR6fZNTBXwxw_HCFua3tJDTgZtW8NoAqTwKyRB3XuCeW--FOIIICgjUD85COO4T7iYG7q92FyiC9Cuvp-pfRqlD5jeeY_jUZ5FActz6MhTyq02ipN69W0Q_UBYPB6XAm9R6FZelRj-vja5FgCjSql0bAFEEeLMqd0zYZI4IRVx-QkX8fkFpXwYbUM1rnnwKkYfzbt_ee8OjXMpwunBD6-noOpW8kQdXRk1n_iCYyhJCA"/>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Portrait of VP Product Rachel Green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD6Vcx6ERK2RHfGyMLPQjKMHA82OMzMEx2yGEGCXPMnG-uz7mBDKqGuQ20pt0lj_Q8ZVBYndZyyPQ3A3FoN3cIWbgbuLkMpx-pLL3cB2alKx4vknlAwaTm73uO1kLzuwHN5L1gthVFSjvZ-PldbbY9HjJKwVFGL4XmpSq6w3l5MPpN_RuDqpL8-4VvY7kh_8LRhsTswkVNev30aAKMVc0UlD5oRLAwD83BTwKdGoPLoEpZTyRa0reKsQ"/>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface block">5 Tasks</span>
+<span class="font-label-sm text-label-sm text-tertiary">2 Decisions</span>
+</div>
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-surface group-hover:translate-x-1 transition-all">chevron_right</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2 text-body-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-primary-container">format_quote</span>
+<span class="italic">“Seed budget reallocation to Autonomous Neural Synthesizer unit finalized.” — Elena Vance</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Signed by Owner</span>
+</div>
+</div>
+</div>
+<!-- Empty Search State Placeholder (hidden by default) -->
+<div class="hidden bg-surface-container-lowest rounded-lg p-space-2xl text-center shadow-sm" id="noResultsState">
+<div class="w-12 h-12 rounded-full bg-surface-container mx-auto flex items-center justify-center text-tertiary mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No meetings found</h3>
+<p class="font-body-sm text-body-sm text-tertiary mt-1 max-w-sm mx-auto">
+        No sessions match your search query or active filter. Try resetting filters or search terms.
+      </p>
+<button class="mt-space-md px-space-md py-1.5 rounded-full bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high" id="resetFilterBtn" type="button">
+        Clear Filter
+      </button>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Micro-interactions -->
+<script>
+  (function() {
+    const uploadBtn = document.getElementById('toggleUploadBtn');
+    const uploadPanel = document.getElementById('uploadPanel');
+    const closeUploadBtn = document.getElementById('closeUploadBtn');
+    const cancelUploadBtn = document.getElementById('cancelUploadBtn');
+    const refreshBtn = document.getElementById('refreshBtn');
+
+    function toggleUpload() {
+      uploadPanel.classList.toggle('hidden');
+      if (!uploadPanel.classList.contains('hidden')) {
+        uploadPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    if (uploadBtn) uploadBtn.addEventListener('click', toggleUpload);
+    if (closeUploadBtn) closeUploadBtn.addEventListener('click', toggleUpload);
+    if (cancelUploadBtn) cancelUploadBtn.addEventListener('click', toggleUpload);
+
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', function() {
+        const icon = refreshBtn.querySelector('.material-symbols-outlined');
+        icon.classList.add('animate-spin');
+        setTimeout(() => {
+          icon.classList.remove('animate-spin');
+        }, 800);
+      });
+    }
+
+    // Filter Tab Switching
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.meeting-card');
+    const searchInput = document.getElementById('searchInput');
+    const noResults = document.getElementById('noResultsState');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
+
+    let currentFilter = 'all';
+
+    function applyFilters() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const text = card.textContent.toLowerCase();
+
+        const matchesFilter = (currentFilter === 'all') || 
+                              (currentFilter === 'processing' && category === 'processing') ||
+                              (currentFilter === 'completed' && category === 'completed') ||
+                              (currentFilter === 'flagged' && text.includes('risk'));
+
+        const matchesSearch = text.includes(query);
+
+        if (matchesFilter && matchesSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+          t.classList.add('text-tertiary');
+        });
+        this.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        this.classList.remove('text-tertiary');
+
+        currentFilter = this.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilters);
+    }
+
+    if (resetFilterBtn) {
+      resetFilterBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        currentFilter = 'all';
+        filterTabs[0].click();
+      });
+    }
+  })();
+</script></main></div></body></html>

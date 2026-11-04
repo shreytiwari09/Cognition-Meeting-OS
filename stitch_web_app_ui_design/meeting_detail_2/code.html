@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-high":"#e9e8e3","tertiary":"#5f5e61","primary-fixed-dim":"#ffb5a0","on-tertiary":"#ffffff","surface":"#faf9f4","inverse-on-surface":"#f2f1ec","on-error-container":"#93000a","surface-dim":"#dbdad5","on-primary-container":"#541200","on-background":"#1b1c19","background":"#faf9f4","secondary":"#006d30","surface-tint":"#b02f00","on-primary":"#ffffff","tertiary-container":"#929094","outline-variant":"#e4beb4","surface-container":"#efeee9","surface-variant":"#e3e3de","error-container":"#ffdad6","primary":"#b02f00","surface-container-low":"#f5f4ef","on-tertiary-container":"#2a292d","error":"#ba1a1a","surface-container-highest":"#e3e3de","secondary-container":"#92f5a4","primary-container":"#ff5722","tertiary-fixed":"#e4e1e6","secondary-fixed-dim":"#79db8d","outline":"#907067","tertiary-fixed-dim":"#c8c5ca","inverse-surface":"#30312e","on-surface":"#1b1c19","on-secondary-container":"#007233","secondary-fixed":"#95f8a7","on-error":"#ffffff","on-tertiary-fixed":"#1b1b1e","on-secondary":"#ffffff","on-primary-fixed-variant":"#862200","surface-bright":"#faf9f4","inverse-primary":"#ffb5a0","on-primary-fixed":"#3b0900","on-secondary-fixed-variant":"#005323","primary-fixed":"#ffdbd1","on-tertiary-fixed-variant":"#47464a","on-secondary-fixed":"#00210a","on-surface-variant":"#5b4039","surface-container-lowest":"#ffffff"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-2xl":"2.5rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","margin-mobile":"1rem","space-xl":"2rem","space-md":"1rem","gutter":"1.25rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"2rem"},"fontFamily":{"label-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface z-50 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm py-space-xs"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight leading-none">Cognition</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim tracking-wider uppercase mt-1">MeetingOS</span></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-lowest text-on-surface shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="dashboard-meetings" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Meetings</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="team-performance" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Team Performance</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="my-work" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span>My Work</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="extension" href="#"><span class="material-symbols-outlined text-[20px]">extension</span><span>Extension</span></a></nav></div><div class="flex flex-col gap-space-md"><div class="bg-surface-container-highest/10 rounded-lg p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>Neural Synthesizer</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">v3.4</span></div><p class="font-body-sm text-body-sm text-tertiary-fixed leading-tight">98.4% speech-to-intent fidelity in real-time executive sync.</p></div><div class="flex items-center justify-between bg-surface-container-highest/15 rounded-full p-space-xs pr-space-md"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABu_2bM9r02zy6J0LiqLzb8GDcq7QU7rGaTjX_yB33njVx-_lY2eksbt_2R1vHb_-UyeuO77QmMNaBsb6N9ns7PVyewZnk6KHFiDMQBvy87wZ2xmfmWJUAg5hzoeE8JVPgricyrWTDwbw6al4cUi7Jj14PUZ-R_5uaf61pPfBAZpqROtM3Vp2URPg9sQTQkkDG7kigpoPNGuun-1LZsG86HJVobbq6cZ5JoDTtyIXjywGy1-SGXFdDfw"/></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-inverse-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim leading-none">VP Operations</span></div></div><span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">unfold_more</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen bg-surface"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-tertiary">Cognition Core</span><span class="text-tertiary-container">/</span><span class="font-label-lg text-label-lg text-on-surface">Executive Command Space</span></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>AI Engine Active</span></div><button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Session</span></button><div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdPJKb0cDgi-TTHiajR7k1GO061AaAaEKF5kD2gfi0AYz4TPzUPD6z04iAkGnsQS9EnedvJ83t1LQ7MRLItsUJEHbEtPH_WDUyCggBxwvoNZR9VI0AaN4Qw29wEHHvOd6TTTQ2Q9HvwjTXUS3tMUcNJOCT0sIqV4TjFGTUz79m76P0heTZOHubjOIxjyumhHzz3t6QIxIU36B3Wn_CMuesMryTaynk8yxDPezyV_SRzHRMD4DJl3fDOg"/></div></div></div></header><main class="w-full pt-16 bg-surface px-space-xl pb-space-2xl"><div class="flex flex-col w-full">
+<!-- Top Meeting Context Header Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<a class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Back to Meetings</span>
+</a>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Product &amp; Design</span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Completed
+        </span>
+<span class="text-tertiary font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+          Oct 2, 2026 · 45 mins
+        </span>
+</div>
+<div class="flex items-center gap-space-md pt-1 flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Q3 Product Strategy &amp; Roadmap Sync</h1>
+<!-- Participant Avatars cluster -->
+<div class="flex items-center -space-x-2 pl-2">
+<div class="w-8 h-8 rounded-full ring-2 ring-surface overflow-hidden bg-surface-container-high" title="Elena Vance">
+<img class="w-full h-full object-cover" data-alt="Corporate headshot of Elena Vance, executive woman in dark blazer with calm strategic expression, warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2k5rvID_AhsF43VsM3O-w4V_yaxj7DWPAZeGYqQYk_xwUGGNXxiHx0WBmZoXxLUdY6NVFg_V0G2v4a1lbOeJTyzoymut4ShV-tebhgc52ELsTBz0aHybxNVZnK4iwGi5Di_hZl5HJa9AfDYJCjS4Kr7vO0YAfc484lWOhAK8dLPCeyxBWgiEqdFQ9qlrI5Z9RS2cPf5oDwl9pBWEXV88uDLobd2-2zJj3sxGoVDBKKDdI97Z65JZYPg"/>
+</div>
+<div class="w-8 h-8 rounded-full ring-2 ring-surface overflow-hidden bg-surface-container-high" title="Rahul Sharma">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of Rahul Sharma, lead software engineer with glasses smiling warmly, minimalist neutral office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0m-eyeo3ufcwl0-dvJ9miBVg-Danlxb_Kkw_sFfJCfcH-1xbkVkw4-jACSeKYPrfv_UZmFDDBiNEcaZrc1F9zQPcZIyood7gWJ6gPOXFnz3oqnXqxlepVGJ-eIHCaSgIuiXP3scslrxDtHwt9Vo9MBzXLSAM8QoBZw_ela7H1mCl1x9DqlFuktjUQW1vFmOodG_vujDyGz1ghshTqyxRcqb9Xy22R3gkbf28DNHia8HBjfKxT6AwKEw"/>
+</div>
+<div class="w-8 h-8 rounded-full ring-2 ring-surface overflow-hidden bg-surface-container-high" title="Anika Rao">
+<img class="w-full h-full object-cover" data-alt="Portrait of Anika Rao, product designer with creative modern attire, clean soft studio illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGcRDjE_25Q8FMQ7q-H7ZDy5dDvsJHecJJooS3HO-OCYGufK4JGp_AF4IafZUFqCkMQlc9YHVmamMKrzquymOAzftnmchpgNOR0cxx_IQmk9LAmlhTLrcWaBdQ9pNElpUt2H2HjWqe0KRJ3UFQbyNMLX-AMZfFxScOeSgn0f-CLZYLDpXosHrGJOLylxBOi_NLQVUUCk3s5wicN_A9WoAb4HcsuP8oRiPZPn8BmhkSYhBdIqmvWrcaIw"/>
+</div>
+<div class="w-8 h-8 rounded-full ring-2 ring-surface overflow-hidden bg-surface-container-high" title="Samira Khan">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of Samira Khan, enterprise customer success director, natural daylight and warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJSMM4skZ59jbEvHajwQ0BH9PgH28J7L_P8gyVK0NIRMlu_TiEx1GwSaDVIcpfasa9wQ31-shEkdH1TsiueZ723eUZe7OncGhV79gVmRNdhTKP4lOUtcMwTh93BsYL_Fg9x18Xu5qRmuQ5ExX3uYM8EFNie51moTVe2QZPWRnD0EHS1r4Hppq-I2OJjfB53qPKTc8ypHXaTBrDtOfU7g7uEbgDNUaRdNT7gmY6lRok9GbjQjiYXBe0XQ"/>
+</div>
+<div class="w-8 h-8 rounded-full ring-2 ring-surface bg-surface-container-highest flex items-center justify-center font-label-sm text-label-sm text-on-surface-variant font-bold">
+            +3
+          </div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="inline-flex items-center gap-1.5 px-space-md py-space-xs rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg shadow-sm transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">file_download</span>
+<span>Export Minutes</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-lg py-space-xs rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg shadow-md transition-all duration-150 transform hover:-translate-y-0.5" id="toggle-assistant-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>Ask Your Meeting</span>
+</button>
+</div>
+</div>
+<!-- Bento Section 1: Executive KPI Cards & Agent Synthesis Stats -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-lg">
+<!-- Meeting Efficiency Score Bento (Inspired by 500-day gauge reference) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Algorithmic Score</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Efficiency Score</h2>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+          Top 5% Org
+        </span>
+</div>
+<div class="flex items-center justify-center py-space-md my-auto gap-space-lg">
+<!-- Circular Progress Ring SVG -->
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-surface-container-high" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-width="9"></circle>
+<circle class="text-secondary" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="20.1" stroke-linecap="round" stroke-width="9"></circle>
+<circle class="text-primary-container" cx="50" cy="50" fill="none" opacity="0.6" r="30" stroke="currentColor" stroke-dasharray="188.4" stroke-dashoffset="45" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tighter leading-none">92</span>
+<span class="font-label-sm text-label-sm text-tertiary">/ 100</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs text-left">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span class="font-bold">+8.4 pts</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary leading-snug">Strong task clarity with zero structural agenda derailment.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-sm bg-surface-container-low/70 -mx-space-lg -mb-space-lg px-space-lg pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Actionability</span>
+<span class="font-label-lg text-label-lg text-on-surface">94.8%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Speaking Equity</span>
+<span class="font-label-lg text-label-lg text-on-surface">Balanced (4/4)</span>
+</div>
+</div>
+</div>
+<!-- Multi-Agent Synthesis Health Card (Warm Bento style with coral and forest chips) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Neural Agent Pipeline Verification</h2>
+<p class="font-body-sm text-body-sm text-tertiary">7 autonomous verification agents processed this transcript</p>
+</div>
+</div>
+<span class="px-space-md py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Audit Signed · v3.4 Engine
+        </span>
+</div>
+<!-- Agent metrics pills grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md py-space-sm">
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Diarization</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">99.8%</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 4 Verified
+          </span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Commitments</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">6</span>
+<span class="font-body-sm text-body-sm text-tertiary">tasks</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5 mt-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> 1 Ambiguous
+          </span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Coverage</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">100%</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">done_all</span> 45:12 audio
+          </span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Consensus</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">96.2%</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> 0 Contradictions
+          </span>
+</div>
+</div>
+<!-- Pipeline Step Ribbon -->
+<div class="flex items-center gap-2 pt-space-xs text-tertiary font-label-sm text-label-sm overflow-x-auto">
+<span class="text-on-surface font-semibold flex items-center gap-1">Pipeline:</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface">1. Extract</span>
+<span class="text-tertiary-container">→</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface">2. Assign</span>
+<span class="text-tertiary-container">→</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface">3. Validate</span>
+<span class="text-tertiary-container">→</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-bold">4. Confidence</span>
+<span class="text-tertiary-container">→</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">5. Summary</span>
+</div>
+</div>
+</div>
+<!-- Notification Banner: AI Minutes of Meeting Generated -->
+<div class="mb-space-lg bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">AI Minutes of Meeting Generated &amp; Synced with Linear &amp; Jira</p>
+<p class="font-body-sm text-body-sm text-tertiary">All owners, confidence metrics, and verbatim audio quotes mapped.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="px-space-md py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+        View Summary
+      </button>
+</div>
+</div>
+<!-- Main Work Area + Sliding Assistant Drawer Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Content Tabs & Task / Decision Bento (8 cols or full width) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Segmented Navigation Pill Control (Inspired by screenshot pill tabs) -->
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="inline-flex p-1 bg-surface-container-high rounded-full shadow-inner">
+<button class="px-space-lg py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm" type="button">
+            Tasks (6)
+          </button>
+<button class="px-space-lg py-1.5 rounded-full text-tertiary hover:text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+            Summary (MoM)
+          </button>
+<button class="px-space-lg py-1.5 rounded-full text-tertiary hover:text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+            Transcript
+          </button>
+<button class="px-space-lg py-1.5 rounded-full text-tertiary hover:text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+            Agent Logs (14)
+          </button>
+</div>
+<!-- Task Category Filter Pills -->
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-tertiary mr-1">Filter:</span>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm font-semibold" type="button">
+            All (6)
+          </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-tertiary font-label-sm text-label-sm" type="button">
+            Pending (4)
+          </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-tertiary font-label-sm text-label-sm" type="button">
+            Done (2)
+          </button>
+</div>
+</div>
+<!-- Task Bento Grid (Component 6.1: High fidelity with evidence quotes) -->
+<div class="flex flex-col gap-space-md">
+<!-- Task Card 1: High Risk / Pending approval -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md transition-all duration-200 hover:shadow-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">1. Finalize OAuth2 Enterprise SSO Connector</span>
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                  Pending · High Risk
+                </span>
+</div>
+<p class="font-body-md text-body-md text-tertiary">Architect SAML 2.0 gateway bridge for Okta and AzureAD federated workspaces.</p>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">Due Oct 10, 2026</span>
+</div>
+</div>
+<!-- Evidence Quote (Hero component for AI trust) -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-1 border-l-4 border-l-primary-container">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-container">format_quote</span>
+                Verbatim Evidence Quote
+              </span>
+<span class="font-mono text-[11px] text-tertiary">[00:18:24 – 00:18:38]</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “I'll have the SAML and Okta connector live by Friday if Dev unblocks the token API.”
+            </p>
+<div class="flex items-center gap-space-xs pt-1 font-label-sm text-label-sm text-tertiary">
+<span class="font-semibold text-on-surface">— Rahul Sharma</span>
+<span>· Lead Infrastructure Engineer</span>
+</div>
+</div>
+<!-- AI Flag Reason Callout (Contradiction check) -->
+<div class="bg-primary-fixed/30 rounded-DEFAULT p-space-sm flex items-start gap-space-xs text-on-primary-container">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">report_problem</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm font-bold">Contradiction Warning · Confidence Analyst</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rahul assumes the token API will be ready by Wednesday, but Dev stated in Sprint Planning that Auth0 migration was pushed by 4 days.</p>
+</div>
+</div>
+<!-- Metadata & Confidence Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Headshot of Rahul Sharma, Lead Infrastructure Engineer, focused tech posture with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDypaDD2SCeIfh-F8tslVOyQA1EQ0uixImxoJA5kLZf5KJNulG-l9mgrdhEPHkiKQXvoR1ZtkTvQOlenYkHNzqgN7rUxlWHYWhvvx3yT5cr4-mhJlBm4vhflCAm4jg1k8rhjX1zaEQeizR1Zgv5zEI_ZffW0ewdZdfWu202SeSf9va5IQwagneEFDilf0xQ6xXJg5mGiN7egTldHB2ooVdzTGGqwBJgzLUdmY2duT_2ISbIoyITYWBTQg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Assignee</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rahul Sharma</span>
+</div>
+</div>
+<!-- AI Confidence Gauge -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-tertiary">Extraction Confidence</span>
+<span class="font-bold text-primary">68% · Moderate</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 68%;"></div>
+</div>
+<span class="text-primary font-label-sm text-label-sm font-medium flex items-center gap-1">
+                → Next step: Reconfirm dependency unblock date with Dev
+              </span>
+</div>
+</div>
+<!-- Approval Footer -->
+<div class="flex items-center justify-end gap-space-sm pt-space-sm border-t border-surface-container-high">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-tertiary hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+              Edit Task
+            </button>
+<button class="px-space-md py-1.5 rounded-full bg-error/10 hover:bg-error/20 text-error font-label-md text-label-md transition-colors" type="button">
+              Reject
+            </button>
+<button class="px-space-lg py-1.5 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm" type="button">
+              Approve Commitment
+            </button>
+</div>
+</div>
+<!-- Task Card 2: Approved / Done -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md transition-all duration-200">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">2. Refactor Task Assignment Graph for Team Scoping</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                  Approved by Elena Vance
+                </span>
+</div>
+<p class="font-body-md text-body-md text-tertiary">Isolate manager tenant views so role-based access policies strictly protect executive reviews.</p>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-sm text-label-sm text-tertiary">Due Oct 8, 2026</span>
+</div>
+</div>
+<!-- Evidence Quote -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-1 border-l-4 border-l-secondary">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">format_quote</span>
+                Verbatim Evidence Quote
+              </span>
+<span class="font-mono text-[11px] text-tertiary">[00:26:10 – 00:26:22]</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “I will refactor the permissions schema by Wednesday afternoon.”
+            </p>
+<div class="flex items-center gap-space-xs pt-1 font-label-sm text-label-sm text-tertiary">
+<span class="font-semibold text-on-surface">— Anika Rao</span>
+<span>· Principal Product Designer</span>
+</div>
+</div>
+<!-- Metadata & Confidence Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Headshot of Anika Rao, Principal Designer, stylish studio framing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhgrKK4vRFY2S9mDynqgnanJ3AR6CpCWFA6bplZr0-ELTuc5_2LHw7VNNfW8T1QL2zLDvJnusmAmtPMIj4DMk4Q0FEjlC45xI4ledAOMyTxtfyIthL0n9lTLeW5mdvN-Q2Wzebw4hc-vd1D20NxtQ2uOfK_0ae9pYqBQcUuuBifGeN0o6LNxfZVBJaKTKdqt1QZCaghTFLJsJuCVIwxveNeClwezTI0LWsW_9rJBZKG0onRmGzkW5_JA"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Assignee</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Anika Rao</span>
+</div>
+</div>
+<!-- AI Confidence Gauge -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-tertiary">Extraction Confidence</span>
+<span class="font-bold text-secondary">94% · High</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 94%;"></div>
+</div>
+<span class="text-secondary font-label-sm text-label-sm font-medium flex items-center gap-1">
+                ✓ Exact deadline, verified owner, no scope conflicts.
+              </span>
+</div>
+</div>
+</div>
+<!-- Task Card 3: Pending Normal -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md transition-all duration-200">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">3. Schedule Customer Usability Sessions with 5 Beta Orgs</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+                  Pending Review
+                </span>
+</div>
+<p class="font-body-md text-body-md text-tertiary">Select Tier-1 enterprise users for 45-minute workflow shadow experiments.</p>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-sm text-label-sm text-tertiary">Due Oct 14, 2026</span>
+</div>
+</div>
+<!-- Evidence Quote -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-1 border-l-4 border-l-tertiary">
+<div class="flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">format_quote</span>
+                Verbatim Evidence Quote
+              </span>
+<span class="font-mono text-[11px] text-tertiary">[00:39:05 – 00:39:18]</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              “I can handle the scheduling with the top tier enterprise users.”
+            </p>
+<div class="flex items-center gap-space-xs pt-1 font-label-sm text-label-sm text-tertiary">
+<span class="font-semibold text-on-surface">— Samira Khan</span>
+<span>· Director of Customer Success</span>
+</div>
+</div>
+<!-- Metadata & Confidence Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Headshot of Samira Khan, Customer Success Lead, professional approachable aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-EWta8Y6XJU6y79vd2X7t8riPsyKL2zvVcVQ8wKpdRyfOK0SN4GG9qFv4-8LGHJ0BC3K68xV3nLYG-3wTOZaajhbM-qKwNrbxUMgjW1ygugoR1in8qxpk_JOvjKoiLURM_7bSoBcQLN0SjObJ2EP5LOA10L-rU6lZedcVNaI0TRPk9ilr5bOIpvcpFF9p8A0vS7Q_-NHJweooiFpkvI8s-KqRDeciKOUO1Pdk7t57oF9IpiG9fOMr2g"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary">Assignee</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Samira Khan</span>
+</div>
+</div>
+<!-- AI Confidence Gauge -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-tertiary">Extraction Confidence</span>
+<span class="font-bold text-on-surface">89% · Strong</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-on-surface rounded-full" style="width: 89%;"></div>
+</div>
+<span class="text-tertiary font-label-sm text-label-sm font-medium flex items-center gap-1">
+                → Auto-inferred target cohort from Q3 account tiering matrix.
+              </span>
+</div>
+</div>
+<!-- Approval Footer -->
+<div class="flex items-center justify-end gap-space-sm pt-space-sm border-t border-surface-container-high">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-tertiary hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+              Edit Task
+            </button>
+<button class="px-space-lg py-1.5 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm" type="button">
+              Approve
+            </button>
+</div>
+</div>
+</div>
+<!-- Decisions & Risks (2-Column Bento Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter pt-space-md">
+<!-- Decisions Bento Box -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Key Decisions Extracted</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-tertiary">2 Total</span>
+</div>
+<!-- Decision 1 -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">1. Transition Auth to OpenID Connect</span>
+<span class="font-mono text-[11px] text-tertiary">[00:14:10]</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Deprecate legacy session tokens in favor of short-lived JWTs paired with OIDC token endpoints.</p>
+<div class="pt-1 italic font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest/80 p-2 rounded-DEFAULT border-l-2 border-secondary">
+              “We all agree: we will adopt OpenID Connect standard universally before Q4.” — <strong>Elena Vance</strong>
+</div>
+</div>
+<!-- Decision 2 -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">2. Bi-Weekly Canary Deployments</span>
+<span class="font-mono text-[11px] text-tertiary">[00:32:45]</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Tier-1 enterprise tenants receive staged updates 10 calendar days ahead of public release rings.</p>
+<div class="pt-1 italic font-body-sm text-body-sm text-on-surface-variant bg-surface-container-lowest/80 p-2 rounded-DEFAULT border-l-2 border-secondary">
+              “Let's lock canary cadence to two weeks minimum across all regional clusters.” — <strong>Dev Patel</strong>
+</div>
+</div>
+</div>
+<!-- Risks & Mitigations Bento Box -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Risks &amp; Mitigations</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container/50 text-error font-bold">1 Critical</span>
+</div>
+<!-- Risk 1 -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">SOC2 Audit Window Disruption</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-error font-label-sm text-label-sm font-bold">High Severity</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Premature IAM token overhaul may invalidate continuous evidence logs during Oct 15 audit window.</p>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary flex-shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface"><span class="font-semibold text-secondary">Mitigation:</span> Keep old token audit stream dual-piped until compliance officer signs off.</p>
+</div>
+</div>
+<!-- Risk 2 -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Design System Drift Across Web &amp; Ext</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">Medium</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">Chrome extension manifest v3 styling tokens have diverged from Figma variable library.</p>
+<div class="p-2 rounded-DEFAULT bg-surface-container-lowest flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary flex-shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface"><span class="font-semibold text-secondary">Mitigation:</span> Anika to export shared JSON token config before Wednesday sprint.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Audit & Compliance Reviewer Banner -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Automated Audit &amp; Compliance Verdict</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Passed with 1 Advisory</span>
+</div>
+<p class="font-body-md text-body-md text-tertiary">
+          The autonomous Audit Agent checked cross-transcript consistency against 12 past executive roadmaps. No policy contradictions detected; one resource dependency advisory flagged for Rahul Sharma's SSO sprint delivery.
+        </p>
+</div>
+</div>
+<!-- Right Column: "Ask Your Meeting" Interactive Drawer (Inspired by Dribbble side panels) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- AI Assistant Card -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col h-[740px] justify-between relative overflow-hidden">
+<!-- Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface leading-tight">Ask Your Meeting</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Neural Transcript Grounded</span>
+</div>
+</div>
+<button class="w-7 h-7 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Chat History Area -->
+<div class="flex flex-col gap-space-md overflow-y-auto py-space-sm my-auto pr-1">
+<!-- System Welcome Message -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+              Cognition Agent v3.4
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Hello Elena. I have thoroughly ingested the 45-minute audio transcript and cross-referenced with your sprint commitments. What would you like to verify?
+            </p>
+</div>
+<!-- Suggested Prompt Chips -->
+<div class="flex flex-wrap gap-1.5">
+<button class="text-left px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              “Did Rahul commit to Friday?”
+            </button>
+<button class="text-left px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              “What were Samira's concerns?”
+            </button>
+<button class="text-left px-space-sm py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              “List all unresolved blockers”
+            </button>
+</div>
+<!-- User Bubble -->
+<div class="flex justify-end">
+<div class="bg-primary-container text-on-primary rounded-2xl rounded-tr-xs px-space-md py-space-sm max-w-[85%] shadow-sm">
+<p class="font-body-md text-body-md">What exactly is blocking Rahul from finishing the SSO connector?</p>
+<span class="block text-right font-mono text-[10px] text-white/80 mt-1">10:48 AM</span>
+</div>
+</div>
+<!-- AI Response Bubble with Verbatim Audio Anchor -->
+<div class="flex justify-start">
+<div class="bg-surface-container-low text-on-surface rounded-2xl rounded-tl-xs p-space-md max-w-[90%] flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+                  Transcript Grounded
+                </span>
+<span class="font-mono text-[10px] text-tertiary">10:49 AM</span>
+</div>
+<p class="font-body-sm text-body-sm leading-relaxed">
+                Rahul stated at <span class="font-mono text-primary font-semibold">[00:18:24]</span> that he needs Dev to finish the token API endpoints before SAML and Okta can be tested in staging.
+              </p>
+<!-- Audio Snippet Player preview pill -->
+<div class="bg-surface-container-lowest rounded-full p-1.5 pr-space-md flex items-center justify-between gap-space-xs shadow-inner">
+<div class="flex items-center gap-2">
+<button class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[14px]">play_arrow</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Rahul Audio [00:18:24]</span>
+</div>
+<span class="font-mono text-[11px] text-tertiary">0:14s</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Input Footer -->
+<div class="pt-space-sm border-t border-surface-container-high flex flex-col gap-2">
+<div class="relative flex items-center">
+<input class="w-full pl-space-md pr-11 py-space-sm rounded-full bg-surface-container-low text-on-surface placeholder:text-tertiary font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container/40" placeholder="Ask anything about this meeting..." type="text"/>
+<button class="absolute right-1.5 w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center hover:bg-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs text-tertiary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Grounded in audio timestamps
+            </span>
+<span class="text-tertiary font-mono">Tokens: 4.8k</span>
+</div>
+</div>
+</div>
+<!-- Quick Executive Summary Snippet (Editorial Forest Green Module from Brief) -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-lg p-space-lg shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider font-bold">Executive Synopsis</span>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">summarize</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-inverse-on-surface">Unanimous Q3 Core Focus</h4>
+<p class="font-body-sm text-body-sm text-tertiary-fixed leading-relaxed">
+          Product and Engineering successfully aligned on an OpenID Connect unified architecture. Team velocity permits 2 concurrent enterprise pilots without pushing the scheduled SOC2 recertification.
+        </p>
+<div class="pt-space-xs flex items-center justify-between">
+<button class="px-space-md py-1 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-inverse-on-surface font-label-sm text-label-sm transition-colors flex items-center gap-1" type="button">
+<span>Copy MoM to Clipboard</span>
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+<span class="font-mono text-[11px] text-tertiary-fixed-dim">Signed: E. Vance</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

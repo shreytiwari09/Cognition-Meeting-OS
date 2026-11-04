@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-high":"#e9e8e3","tertiary":"#5f5e61","primary-fixed-dim":"#ffb5a0","on-tertiary":"#ffffff","surface":"#faf9f4","inverse-on-surface":"#f2f1ec","on-error-container":"#93000a","surface-dim":"#dbdad5","on-primary-container":"#541200","on-background":"#1b1c19","background":"#faf9f4","secondary":"#006d30","surface-tint":"#b02f00","on-primary":"#ffffff","tertiary-container":"#929094","outline-variant":"#e4beb4","surface-container":"#efeee9","surface-variant":"#e3e3de","error-container":"#ffdad6","primary":"#b02f00","surface-container-low":"#f5f4ef","on-tertiary-container":"#2a292d","error":"#ba1a1a","surface-container-highest":"#e3e3de","secondary-container":"#92f5a4","primary-container":"#ff5722","tertiary-fixed":"#e4e1e6","secondary-fixed-dim":"#79db8d","outline":"#907067","tertiary-fixed-dim":"#c8c5ca","inverse-surface":"#30312e","on-surface":"#1b1c19","on-secondary-container":"#007233","secondary-fixed":"#95f8a7","on-error":"#ffffff","on-tertiary-fixed":"#1b1b1e","on-secondary":"#ffffff","on-primary-fixed-variant":"#862200","surface-bright":"#faf9f4","inverse-primary":"#ffb5a0","on-primary-fixed":"#3b0900","on-secondary-fixed-variant":"#005323","primary-fixed":"#ffdbd1","on-tertiary-fixed-variant":"#47464a","on-secondary-fixed":"#00210a","on-surface-variant":"#5b4039","surface-container-lowest":"#ffffff"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-2xl":"2.5rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","margin-mobile":"1rem","space-xl":"2rem","space-md":"1rem","gutter":"1.25rem","space-lg":"1.5rem","space-xs":"0.25rem","margin":"2rem"},"fontFamily":{"label-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface z-50 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm py-space-xs"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-inverse-on-surface tracking-tight leading-none">Cognition</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim tracking-wider uppercase mt-1">MeetingOS</span></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-lowest text-on-surface shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="dashboard-meetings" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Meetings</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-sm" data-path="team-performance" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Team Performance</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="my-work" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span>My Work</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-DEFAULT font-label-lg text-label-lg text-tertiary-fixed-dim hover:bg-surface-container-highest/20 hover:text-inverse-on-surface transition-all duration-200" data-path="extension" href="#"><span class="material-symbols-outlined text-[20px]">extension</span><span>Extension</span></a></nav></div><div class="flex flex-col gap-space-md"><div class="bg-surface-container-highest/10 rounded-lg p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>Neural Synthesizer</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">v3.4</span></div><p class="font-body-sm text-body-sm text-tertiary-fixed leading-tight">98.4% speech-to-intent fidelity in real-time executive sync.</p></div><div class="flex items-center justify-between bg-surface-container-highest/15 rounded-full p-space-xs pr-space-md"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnMhlMAwPI2JXhnJVkeZJXHEnYCdrTtXQBw_kga4zyMwwO8RXDRoxUM5M9ubk_FtS6gHnOqBhW8H4ZIPvyUaLdSryB56s8aOvbTWsA829HMoM5Muv3-O0ufAphM6UsZquzY6xzFmJYdtK4OOna_bO6K4DdpNgvsqlmmrnsFZqVK-7IvexiT2L1IrfciuYSWcNvX2MYmGWZaq7Pev3mYG6_Z7gsWFR9K4GAA9rwLWODWl-igJ81BS-oWA"/></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-inverse-on-surface leading-tight">Elena Vance</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim leading-none">VP Operations</span></div></div><span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">unfold_more</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen bg-surface"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-tertiary">Cognition Core</span><span class="text-tertiary-container">/</span><span class="font-label-lg text-label-lg text-on-surface">Executive Command Space</span></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>AI Engine Active</span></div><button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Session</span></button><div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfQapHwNNgsG4l4_6YxgMypW-5nzk3-KJTsJ664NgclnYXKNcnew3kFAaSSorzSxUzkxXRmUAeJLtb4km3IPJggHfrCZ0oBlMSBNL9oKX4gke4lqft-eCl1VlHGCyH_2R6PNkjcFTHJaZCzYBNiTE5hOp_Pl6HynPfufg6NE-auXGoRHufauITLzX-HRHDPBlnqBOjJL42FKcSpkohvwxTBu9DN08KCYY06Zq2GM36ihtNs4F7vtY_ZA"/></div></div></div></header><main class="w-full pt-16 bg-surface px-space-xl pb-space-2xl"><div class="flex flex-col w-full">
+<!-- Content Header & Scope Navigation -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Engineering &amp; Product Ops</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live Sync
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Team Performance &amp; Execution</h1>
+<p class="font-body-md text-body-md text-tertiary">Real-time task delivery velocity and AI commitment extraction across the active meeting sprint.</p>
+</div>
+<!-- Controls Toolbar -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Window Pill Segmented Control -->
+<div class="bg-surface-container-high p-1 rounded-full flex items-center shadow-inner">
+<span class="text-tertiary font-label-sm text-label-sm px-3 select-none">Look at last:</span>
+<button class="px-3 py-1 rounded-full text-tertiary hover:text-on-surface font-label-md text-label-md transition-all" type="button">5</button>
+<button class="px-3.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm" type="button">10 Meetings</button>
+<button class="px-3 py-1 rounded-full text-tertiary hover:text-on-surface font-label-md text-label-md transition-all" type="button">20</button>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">ios_share</span>
+<span>Audit Log</span>
+</button>
+<button class="px-4 py-2 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span>Run AI Calibration</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bento KPI Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter mb-space-lg">
+<!-- Card 1: Completion Rate Gauge -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary">Completion Rate</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">task_alt</span>
+</div>
+<div class="flex items-center justify-between my-2">
+<div class="flex flex-col">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none">78%</span>
+<span class="font-label-sm text-label-sm text-secondary mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +5.2% vs prev
+          </span>
+</div>
+<!-- Donut Mini Gauge -->
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="78, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-label-sm font-bold text-on-surface">39/50</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary leading-none">39 of 50 tasks verified done</span>
+</div>
+<!-- Card 2: Coral Outlier Card - Overdue Tasks -->
+<div class="bg-primary-container text-on-primary rounded-lg p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-primary/80 font-medium">Overdue Impact</span>
+<span class="px-2 py-0.5 rounded-full bg-white/20 text-on-primary font-label-sm text-label-sm">Critical</span>
+</div>
+<div class="my-2">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-primary tracking-tight leading-none">4</span>
+<span class="font-label-md text-label-md text-on-primary/90 font-semibold">Overdue</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm text-on-primary/80">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+<span>2 Escalated to Executive</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-white/20">
+<span class="font-body-sm text-body-sm text-on-primary/90">Requires sign-off</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3: On-Time Delivery -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary">On-Time Velocity</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">timer</span>
+</div>
+<div class="my-2">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none">86%</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary mt-1">
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+<span>vs 82% previous cycle</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 86%;"></div>
+</div>
+</div>
+<!-- Card 4: People at Risk -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary">People at Risk</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">warning</span>
+</div>
+<div class="my-2">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none">2</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold mt-1">
+<span>Flagged in 3+ syncs</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary leading-none">Rahul S., Anika R.</span>
+</div>
+<!-- Card 5: Awaiting Approval -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-tertiary">Awaiting Sign-off</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">fact_check</span>
+</div>
+<div class="my-2">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-none">5</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary mt-1">
+<span>AI Tasks Flagged</span>
+</div>
+</div>
+<div class="flex -space-x-1.5 overflow-hidden">
+<span class="inline-block w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] text-center leading-5 font-bold">AK</span>
+<span class="inline-block w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] text-center leading-5 font-bold">DP</span>
+<span class="inline-block w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px] text-center leading-5 font-bold">+3</span>
+</div>
+</div>
+</div>
+<!-- "Needs Your Attention" Banner -->
+<div class="bg-surface-container-low rounded-lg p-space-md sm:p-space-lg mb-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Needs Your Attention</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">3 Exceptions</span>
+</div>
+<button class="text-tertiary hover:text-on-surface font-label-md text-label-md flex items-center gap-1" type="button">
+<span>Dismiss non-critical</span>
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Alert Item 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex items-start gap-space-sm shadow-sm hover:shadow transition-shadow">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Rahul Sharma</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px]">CRITICAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Has 3 overdue tasks. Oldest commitment fell behind on <span class="font-semibold text-on-surface">Sep 20</span>.</p>
+</div>
+</div>
+<!-- Alert Item 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex items-start gap-space-sm shadow-sm hover:shadow transition-shadow">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Anika Rao</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-[10px]">WARNING</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Completed 6 of 10 tasks (60%) from recent sprints. 4 unresolved deliverables pending.</p>
+</div>
+</div>
+<!-- Alert Item 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT flex items-start gap-space-sm shadow-sm hover:shadow transition-shadow">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-tertiary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">trending_down</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Dev Patel</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-[10px]">VELOCITY DROP</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-0.5">Completion dropped from 80% to 55% compared with previous 10 meeting cycles.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Bento Grid: People Accountability (Left) + Intelligence Stream (Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: 8-Spans People Grid -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Section Top Filters -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 bg-surface-container-high p-1 rounded-full w-fit">
+<button class="px-3.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm" type="button">Everyone (8)</button>
+<button class="px-3 py-1 rounded-full text-tertiary hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span>Flagged</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="text-tertiary font-bold">2</span>
+</button>
+<button class="px-3 py-1 rounded-full text-tertiary hover:text-on-surface font-label-sm text-label-sm" type="button">On Track (5)</button>
+<button class="px-3 py-1 rounded-full text-tertiary hover:text-on-surface font-label-sm text-label-sm" type="button">No Tasks (1)</button>
+</div>
+<!-- Matrix Legend -->
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-tertiary">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span> Done</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-surface-container-high"></span> Open</span>
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-primary-container"></span> Overdue</span>
+</div>
+</div>
+<!-- Person Card 1: Rahul Sharma (At Risk) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up professional portrait of Rahul Sharma, an Indian male software architect with a thoughtful expression, studio warm natural lighting, warm cream background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUQt35YqOe_Zc3rBIszqnDd7UsEPnnEOBrKYkQIBCKDvP7or3rOtIiZVVp3X36VAttAjUgJXb734FqT7CaMj5g3J1sEmN8Et7vKZizIuceOJXO_7t5mzFLQZO975BxAifQ7qlKHcyE8viGCu0oMR_svwDBPD2G_P_a-FE9hlbMBrsOMmB1jlKakmRhSAXyL6xwnZL7xWW-4j56QOfUKdbTRXPmP5acmx02n2ENQBHUY4k270lcW_Vlrw"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Rahul Sharma</span>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> At Risk
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Senior Fullstack Developer • Core Architecture Sync</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 text-right">
+<div class="flex flex-col items-end">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">5/10</span>
+<span class="font-label-md text-label-md text-tertiary font-normal">tasks (50%)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5">▼ 8 pts trend</span>
+</div>
+</div>
+</div>
+<!-- Task Commitments Strip: 10 Squares -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">AI-Extracted Commitments (Past 10 Meetings)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">3 Overdue · 2 Open</span>
+</div>
+<div class="grid grid-cols-10 gap-1.5">
+<!-- 5 Done (Green) -->
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary" title="Task Completed on time"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary" title="Task Completed on time"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary" title="Task Completed on time"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary" title="Task Completed on time"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary" title="Task Completed on time"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<!-- 2 Open (Neutral) -->
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary" title="Task Open / In Progress"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary" title="Task Open / In Progress"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+<!-- 3 Red Alert / Overdue -->
+<div class="h-7 rounded-sm bg-primary-container text-on-primary flex items-center justify-center shadow-xs" title="Overdue Task"><span class="material-symbols-outlined text-[16px]">priority_high</span></div>
+<div class="h-7 rounded-sm bg-primary-container text-on-primary flex items-center justify-center shadow-xs" title="Overdue Task"><span class="material-symbols-outlined text-[16px]">priority_high</span></div>
+<div class="h-7 rounded-sm bg-primary-container text-on-primary flex items-center justify-center shadow-xs" title="Overdue Task"><span class="material-symbols-outlined text-[16px]">priority_high</span></div>
+</div>
+</div>
+<!-- Metrics Line & Evidence Quote Preview -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface">
+<span><strong class="text-primary font-bold">3</strong> Overdue</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">2</strong> In Flight</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">72%</strong> Historical On-Time</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-body-sm text-body-sm italic truncate">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">format_quote</span>
+<span class="truncate">“I will patch the Redis cluster lock failure by Friday 5 PM.”</span>
+</div>
+</div>
+</div>
+<!-- Person Card 2: Anika Rao (Needs Attention) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Headshot of Anika Rao, an executive South Asian product woman smiling with modern glasses, soft natural daylight, minimalist editorial portrait style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPh5jU3gGlazbdITY3Rm00Zi9gVST973zOwy3VKONQGiVuCTPi8yKO0FEESyQ1RNaEos8DeFo1vasfVIWmIIUbhSEe68BhnYon0pRpAVdN1vhp9QIza8KswqDMG-vX1PxDFPSF17sVb5wU6IctnzPWb7syPXx40l9JWBwHwIiNQB1kARPJoB4zJqAu4sdparkjRhG_FMnG-7r20rdeAKs4V4JEnm3UGc3swiyPtoUWu-Jn1xJwTMIEpw"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Anika Rao</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Needs Attention
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Product Lead • Customer Growth &amp; Retention</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 text-right">
+<div class="flex flex-col items-end">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">6/10</span>
+<span class="font-label-md text-label-md text-tertiary font-normal">tasks (60%)</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">▼ 4 pts trend</span>
+</div>
+</div>
+</div>
+<!-- Task Commitments Strip: 6 Done, 3 Open, 1 Overdue -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">AI-Extracted Commitments (Past 10 Meetings)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">1 Overdue · 3 Open</span>
+</div>
+<div class="grid grid-cols-10 gap-1.5">
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+<div class="h-7 rounded-sm bg-primary-container text-on-primary flex items-center justify-center shadow-xs"><span class="material-symbols-outlined text-[16px]">priority_high</span></div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface">
+<span><strong class="text-primary font-bold">1</strong> Overdue</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">3</strong> Open</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">85%</strong> Historical On-Time</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-body-sm text-body-sm italic truncate">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">format_quote</span>
+<span class="truncate">“I'll share the Q3 roadmap synthesis deck with sales leaders.”</span>
+</div>
+</div>
+</div>
+<!-- Person Card 3: Dev Patel (On Track / High Performer) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of Dev Patel, young professional Indian software developer in a casual dark blazer, light natural background, warm cinematic tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjBwtGhBeiv-DeHzIhOdVYLw4pFffLIFxKMuyfxbjtFGaJXvjw8A0E7_NNGILJ_TgciQbias2RmRUZFKWYmui_LZjSKPwG-hSXjgROl43ygOt0tv96rH6VS-9OR4S6ZwdqLaPy1qIUSWO2RN2JIu9eEmmSVHu733_p_PxBAJFo-rV4m4RL03ckQXkHCjvPLZolCQOcXj_zPmGQ6AroJzg9jbBLAWIvE-HUQtaPE0lG_XzJes3FuQEdaQ"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Dev Patel</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> On Track
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Backend Engineer • Platform &amp; Observability</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 text-right">
+<div class="flex flex-col items-end">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-secondary font-bold">9/10</span>
+<span class="font-label-md text-label-md text-tertiary font-normal">tasks (90%)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">▲ 12 pts trend</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">AI-Extracted Commitments (Past 10 Meetings)</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">0 Overdue · 1 In Flight</span>
+</div>
+<div class="grid grid-cols-10 gap-1.5">
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface">
+<span><strong class="text-secondary font-bold">0</strong> Overdue</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">1</strong> Open</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">95%</strong> Historical On-Time</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-body-sm text-body-sm italic truncate">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">format_quote</span>
+<span class="truncate">“Telemetry schema migration completed without customer downtime.”</span>
+</div>
+</div>
+</div>
+<!-- Person Card 4: Samira Khan -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of Samira Khan, female lead product designer with modern warm aesthetic, gentle daylight, confident expression, editorial minimalism" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAzfoRFu1I4BKZQo6Ko0Hi0if8K8YuYK2G5IN1yIGP01zeBIBLf-YbO6GjgGCloO5zXQ4tzl2VU9Bu3JY8Vopwf44NZpUPBe8dfcCjG9-un28DY3-ACEHbC_sa0GxjN3Xe0wYvXv_ZG6AS_n4TAeEYLlHRIPGD0T85-HI4evVPygFaaiclDF2quDBNykcaYof2L-fe8JYJDf9mtrdqUFUvLgmlsO2-6RsxvxAUXQYs2KQnriBpsDGpPg"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Samira Khan</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> On Track
+                </span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary">Senior Product Designer • Design System &amp; Usability</span>
+</div>
+</div>
+<div class="flex items-baseline gap-3 text-right">
+<div class="flex flex-col items-end">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">8/10</span>
+<span class="font-label-md text-label-md text-tertiary font-normal">tasks (80%)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">▲ 2 pts trend</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary">AI-Extracted Commitments (Past 10 Meetings)</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">0 Overdue · 2 Open</span>
+</div>
+<div class="grid grid-cols-10 gap-1.5">
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-secondary/15 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-[16px]">check</span></div>
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+<div class="h-7 rounded-sm bg-surface-container-high flex items-center justify-center text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span></div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface">
+<span><strong class="text-secondary font-bold">0</strong> Overdue</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">2</strong> In Progress</span>
+<span class="text-tertiary-container">/</span>
+<span><strong class="font-bold">91%</strong> Historical On-Time</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-body-sm text-body-sm italic truncate">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">format_quote</span>
+<span class="truncate">“Will complete prototype user-testing feedback on Friday morning.”</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: 4-Spans Execution Intelligence Stream -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Bento Widget 1: Awaiting Your Approval (AI Calibration) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Awaiting Sign-off</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">3 Pending</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary leading-tight">Tasks identified with &gt;85% transcription confidence requiring manager sign-off.</p>
+<!-- Approval Item 1 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold leading-snug">Deliver OAuth 2.1 specs</span>
+<span class="font-body-sm text-body-sm text-tertiary">Rahul S. • Due Sep 30</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/50 text-secondary font-label-sm text-[11px] font-bold">92% conf</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic bg-surface-container-lowest/80 p-2 rounded">
+            “I will wrap the OAuth 2.1 RFC documentation before the sprint ends.”
+          </p>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-3 py-1 rounded-full text-tertiary hover:bg-surface-container-highest font-label-sm text-label-sm transition-colors" type="button">Reject</button>
+<button class="px-3.5 py-1 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm transition-colors shadow-sm" type="button">Approve Task</button>
+</div>
+</div>
+<!-- Approval Item 2 -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold leading-snug">Client Billing Fallback Logic</span>
+<span class="font-body-sm text-body-sm text-tertiary">Dev Patel • Due Oct 04</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/50 text-secondary font-label-sm text-[11px] font-bold">88% conf</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic bg-surface-container-lowest/80 p-2 rounded">
+            “Let's introduce a mock retry loop for stripe webhook timeouts.”
+          </p>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-3 py-1 rounded-full text-tertiary hover:bg-surface-container-highest font-label-sm text-label-sm transition-colors" type="button">Reject</button>
+<button class="px-3.5 py-1 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm transition-colors shadow-sm" type="button">Approve Task</button>
+</div>
+</div>
+</div>
+<!-- Bento Widget 2: Due in Next 7 Days -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Due Next 7 Days</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Sprint 41</span>
+</div>
+<div class="flex flex-col divide-y divide-surface-container">
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">SOC2 Policy Upload</span>
+<span class="font-body-sm text-body-sm text-tertiary">Elena Vance • Tomorrow</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Oct 02</span>
+</div>
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Staging Migration Script</span>
+<span class="font-body-sm text-body-sm text-tertiary">Dev Patel • In 3 days</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Oct 04</span>
+</div>
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Design Tokens Rollout</span>
+<span class="font-body-sm text-body-sm text-tertiary">Samira Khan • In 5 days</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Oct 06</span>
+</div>
+</div>
+</div>
+<!-- Bento Widget 3: Risks Raised (Audit Agent) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">shield_with_heart</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Risks Raised</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">2 Active</span>
+</div>
+<div class="flex flex-col gap-space-sm mt-1">
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">Timeline Buffer Risk</span>
+<span class="font-label-sm text-[11px] text-tertiary">Platform Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">SOC2 audit deadline conflicts with database migration freeze on Oct 14.</p>
+</div>
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary-container">Token API Stability</span>
+<span class="font-label-sm text-[11px] text-tertiary">Core Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">LLM extraction endpoint rate-limits triggered during multi-speaker audio upload.</p>
+</div>
+</div>
+</div>
+<!-- Bento Widget 4: Transcript Extraction vs Delivery Velocity Chart (Dribbble Ref 13 Style) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tertiary">Sprint Velocity</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Extraction vs Shipped</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center">
+<span class="material-symbols-outlined text-[16px]">expand_less</span> +15%
+          </span>
+</div>
+<!-- Vertical Pill Bar Chart (Screenshot 13 Style) -->
+<div class="flex items-end justify-between h-40 pt-4 px-2">
+<!-- Col 1 -->
+<div class="flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-8 bg-surface-container rounded-full h-full flex flex-col justify-end p-1">
+<div class="w-full bg-surface-container-highest rounded-full" style="height: 38%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">W37</span>
+</div>
+<!-- Col 2 -->
+<div class="flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-8 bg-surface-container rounded-full h-full flex flex-col justify-end p-1">
+<div class="w-full bg-surface-container-highest rounded-full" style="height: 52%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">W38</span>
+</div>
+<!-- Col 3: Highlight Column (Coral Orange Pill) -->
+<div class="flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-8 bg-surface-container rounded-full h-full flex flex-col justify-end p-1 relative">
+<div class="w-full bg-primary-container rounded-full flex items-start justify-center pt-1.5 shadow-sm" style="height: 84%;">
+<span class="text-on-primary font-label-sm text-[10px] font-bold">84</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">W39</span>
+</div>
+<!-- Col 4 -->
+<div class="flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-8 bg-surface-container rounded-full h-full flex flex-col justify-end p-1">
+<div class="w-full bg-surface-container-highest rounded-full" style="height: 64%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">W40</span>
+</div>
+<!-- Col 5 -->
+<div class="flex flex-col items-center gap-2 h-full justify-end">
+<div class="w-8 bg-surface-container rounded-full h-full flex flex-col justify-end p-1">
+<div class="w-full bg-secondary rounded-full" style="height: 78%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Active</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm border-t border-surface-container text-tertiary font-label-sm text-label-sm">
+<span>Target: 80% Delivered</span>
+<span class="text-on-surface font-semibold">Current: 78.4%</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed-dim":"#cebdff","on-surface":"#e4e1ee","tertiary":"#ddb8ff","on-tertiary-fixed-variant":"#62259b","surface-container-low":"#1b1b24","on-secondary-fixed":"#21005e","on-error-container":"#ffdad6","on-primary-fixed":"#25005a","inverse-surface":"#e4e1ee","surface-variant":"#34343e","primary-container":"#7c3aed","on-tertiary-container":"#f2e0ff","surface-container-high":"#292932","primary":"#d2bbff","error-container":"#93000a","primary-fixed":"#eaddff","inverse-primary":"#732ee4","surface-tint":"#d2bbff","on-tertiary":"#490081","outline-variant":"#4a4455","error":"#ffb4ab","on-secondary-container":"#bea8ff","tertiary-fixed":"#f0dbff","on-secondary":"#381385","surface-container-highest":"#34343e","on-primary-container":"#ede0ff","on-surface-variant":"#ccc3d8","inverse-on-surface":"#302f39","on-primary":"#3f008e","on-primary-fixed-variant":"#5a00c6","surface-dim":"#13131b","secondary-fixed":"#e8ddff","on-secondary-fixed-variant":"#4f319c","tertiary-fixed-dim":"#ddb8ff","on-background":"#e4e1ee","on-error":"#690005","secondary":"#cebdff","on-tertiary-fixed":"#2c0051","secondary-container":"#4f319c","surface-bright":"#393842","background":"#13131b","tertiary-container":"#844abe","surface":"#13131b","surface-container":"#1f1f28","surface-container-lowest":"#0d0d16","outline":"#958da1","primary-fixed-dim":"#d2bbff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"0.75rem","space-sm":"0.5rem","space-2xl":"2rem","margin":"1rem","space-lg":"1rem","gutter-lg":"1.5rem","space-xs":"0.25rem","margin-lg":"2rem","margin-md":"1.5rem","gutter":"1rem","space-xl":"1.5rem"},fontFamily:{"body-sm":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"body-md":["Inter"],"code-sm":["JetBrains Mono"],"display-lg-mobile":["Inter"],"display-lg":["Inter"]},fontSize:{"body-sm":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"500"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0em","fontWeight":"400"}],"code-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0em","fontWeight":"400"}],"display-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen relative"><header class="fixed top-0 left-0 right-0 z-50 h-14 bg-[#07070f]/90 backdrop-blur-md border-b border-white/[0.08]"><div class="w-full h-14 px-gutter-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="Cognition Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WH4qPXKWRkj-YJAHWA4iEwK6bnKSS7Q7jCOaoL3U7Jjhib3Y6QUGkfaYugMfxmsRa9OcuPZtO_0fCFaD8EkW6ykKNo33yBLEwW1vR7DLuzVfl2_d0mgtUNEU5vdM5-pg7ocatjnjhGhlBipbM6TzTQrqJrbHS0yqOhLD2f_w7Lq25mqgyMvlMBdI3RlKD3N-MY3TvzJOGr49MvZP8n-Ww8gkaXpzjTeKahkS5PEWL882yBWM_JObRC5PYZ"/><div class="flex items-baseline gap-1.5 ml-1"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Cognition</span><span class="font-label-md text-label-md text-primary font-medium tracking-wide uppercase">MeetingOS</span></div></div><div class="hidden md:flex items-center text-outline-variant font-code-sm text-code-sm select-none">/</div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-medium"><a class="px-space-md py-1.5 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="meetings" href="#">Meetings</a><a aria-current="page" class="px-space-md py-1.5 rounded-lg transition-all bg-surface-container-high text-primary font-medium" data-path="team" href="#">Team</a><a class="px-space-md py-1.5 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="extension" href="#">Extension</a></nav></div><div class="flex items-center gap-space-lg"><div class="hidden sm:flex items-center px-2 py-0.5 rounded-full border border-primary/40 bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Owner</div><div class="flex items-center gap-space-md pl-2 border-l border-white/[0.08]"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDej8Jsc-Um2jeTelRipVLS1qCcwdG-Ira6eHr5ybuCEftWnKS3bCvAU2jUmHmBGDLMIizYm8rSWoSqKqm7O7k07v8SOw6sEwQjB4kbDqvMXJKCs3sTSgdm6zzCvIcEAR63_G4BvzTv8EWLhw8ZoY5EemLew0Zg_zBLHby9koW0WeKVrJAyW6drVC8mFyKSHHlr9WOFdRaC-jT8uu1bLESvSTSOnP1mbW0L_lDnovP6e6rw__wZr4SBKA"/><span class="hidden lg:inline-block font-body-md text-body-md font-medium text-on-surface">Elena Vance</span></div><a class="hidden sm:inline-flex items-center px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-error hover:bg-error-container/20 transition-colors" data-path="login" href="#">Sign out</a></div></div></div></header><main class="w-full pt-14 bg-surface min-h-[calc(100vh-56px)] pb-space-2xl"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1580px] mx-auto px-margin md:px-margin-lg py-space-xl flex flex-col gap-space-xl">
+<!-- Top Sub-Navigation & Scope Controls -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b-0 pb-1">
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-1 rounded-xl">
+<button class="px-space-lg py-1.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">monitoring</span>
+          Performance
+        </button>
+<button class="px-space-lg py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">group_add</span>
+          Members &amp; Invites
+        </button>
+</div>
+<!-- Window Selector Segmented Control -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Look at the last:</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded-lg" id="window-selector">
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">5</button>
+<button class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all" type="button">10 Meetings</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">20</button>
+</div>
+</div>
+</div>
+<!-- Executive Title & AI Pipeline Brief -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-code-sm text-code-sm uppercase tracking-widest font-semibold">Live Synthesis Active</span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Last synced 4m ago across Zoom &amp; Meet transcripts</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Team Performance &amp; Execution Accountability</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Tracking task delivery, deadlines, and AI-extracted commitments from meeting transcripts.</p>
+</div>
+<!-- Action triggers -->
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+          Export Audit Log
+        </button>
+<button class="h-9 px-space-lg rounded-lg bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-label-md text-label-md font-medium flex items-center gap-1.5 shadow-md transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+          Run AI Calibration
+        </button>
+</div>
+</div>
+<!-- 5 Executive KPI Summary Cards -->
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-space-md">
+<!-- KPI 1 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Completion Rate</span>
+<span class="flex items-center gap-0.5 text-secondary font-code-sm text-code-sm bg-secondary/10 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+            +6 pts
+          </span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">78%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">39 of 50 tasks done</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Overdue</span>
+<span class="flex items-center gap-1 text-error font-label-sm text-label-sm bg-error/10 px-1.5 py-0.5 rounded font-semibold uppercase">
+            2 Escalated
+          </span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-error tracking-tight">4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tasks requiring review</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 32%"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">On-Time Delivery</span>
+<span class="flex items-center gap-0.5 text-secondary font-code-sm text-code-sm bg-secondary/10 px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[12px]">north_east</span>
+            +4%
+          </span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">86%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs 82% prev window</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 86%"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="flex flex-col p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">People at Risk</span>
+<span class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm bg-tertiary-container/30 px-1.5 py-0.5 rounded">
+            Action item
+          </span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary tracking-tight">2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">members flagged</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="col-span-2 md:col-span-1 flex flex-col p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Awaiting Approval</span>
+<span class="flex items-center gap-1 text-primary font-label-sm text-label-sm bg-primary/10 px-1.5 py-0.5 rounded">
+            AI Extracted
+          </span>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tasks pending sign-off</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</div>
+<!-- 'Needs Your Attention' Alert Box -->
+<div class="w-full rounded-2xl bg-error-container/15 p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Needs Your Attention</span>
+<span class="ml-2 font-label-sm text-label-sm text-error uppercase tracking-wider bg-error/15 px-2 py-0.5 rounded font-bold">3 Escalations</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface text-label-md font-label-md flex items-center gap-1" type="button">
+          Dismiss all non-critical
+          <span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Alert 1 -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest/80 gap-3">
+<div class="flex items-start gap-2.5">
+<span class="w-2 h-2 rounded-full bg-error mt-1.5 shrink-0 animate-pulse"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-error font-semibold uppercase tracking-wider">Critical Execution Gap</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+<strong class="font-semibold text-primary">Anika</strong> completed 6 of 10 tasks from the last 10 meetings (60%): 4 not done.
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between pl-4">
+<span class="font-code-sm text-code-sm text-outline">Sprint 42 Sync</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high text-label-sm font-label-sm font-medium transition-all" type="button">
+              View Tasks →
+            </button>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest/80 gap-3">
+<div class="flex items-start gap-2.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container mt-1.5 shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider">Overdue Commitments</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+<strong class="font-semibold text-primary">Rahul</strong> has 3 overdue tasks (oldest was due Sep 20).
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between pl-4">
+<span class="font-code-sm text-code-sm text-outline">Client Core Delivery</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high text-label-sm font-label-sm font-medium transition-all" type="button">
+              Review Schedule →
+            </button>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest/80 gap-3">
+<div class="flex items-start gap-2.5">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1.5 shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Velocity Delta</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+<strong class="font-semibold text-primary">Dev's</strong> completion dropped from 80% to 55% compared with previous 10 meetings.
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between pl-4">
+<span class="font-code-sm text-code-sm text-outline">Eng Retrospective</span>
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high text-label-sm font-label-sm font-medium transition-all" type="button">
+              Calibrate Load →
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Workspace Layout: 8-Col Analytical Left & 4-Col Intelligence Right -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left Column: Filter Bar & People Performance Grid (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Controls & Task Matrix Legend -->
+<div class="flex flex-wrap items-center justify-between gap-space-md p-3 rounded-xl bg-surface-container-low">
+<!-- Filter pills -->
+<div class="flex items-center gap-1.5 flex-wrap" id="member-filter-pills">
+<button class="px-3 py-1 rounded-lg bg-surface-container-highest text-primary font-label-md text-label-md font-semibold" type="button">Everyone (8)</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors" type="button">Flagged (2)</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors" type="button">On Track (5)</button>
+<button class="px-3 py-1 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors" type="button">No Tasks (1)</button>
+</div>
+<!-- Matrix Legend -->
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary inline-block"></span>
+              Done
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-container-highest inline-block"></span>
+              Open
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-sm bg-error inline-block"></span>
+              Overdue
+            </span>
+</div>
+</div>
+<!-- People Performance Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card 1: Rahul Sharma (At Risk) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A cinematic medium close-up of a South Asian male software engineer with glasses, working in a modern ambient-lit tech workspace with purple and dark blue backlighting, calm and focused demeanor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmAiFS8oYPhOb8nTcxqK9Ir1_bGy7gcEYqnX1T4osCA8ElTaFlUtid8Kq036XcvzVKGANJ3GJPATRpYj07EpQ-ueA_Ef0XuFWYXXZNW4OLHi2V0FkNO6uPRrHSe_3arMb6aTLEnN4xvhthQsSzThyrY4nLiyDeyTaFRoDl0oMA9X2kORrk6UllITB5cr0m_0WjHB0JU7mhlgnGmFEUXWJQEUOinF0JnzZ8xs7fURonKsr7l6R_htmfKw"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-error ring-2 ring-surface-container-low"></span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Rahul Sharma</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Senior Fullstack Dev</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-error bg-error/10 font-label-sm text-label-sm uppercase font-bold tracking-wider">At Risk</span>
+</div>
+<!-- Big Stat & Trend -->
+<div class="mt-4 flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">5/10</span>
+<span class="font-label-md text-label-md text-on-surface-variant">tasks completed (50%)</span>
+</div>
+<span class="flex items-center text-error font-code-sm text-code-sm font-semibold">
+                ▼ 8 pts
+              </span>
+</div>
+<!-- 50% Progress Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 50%"></div>
+</div>
+<!-- 10 Task Micro-Matrix: 5 green, 2 grey, 3 red -->
+<div class="mt-4 pt-3 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Last 10 meeting commitments</span>
+<div class="grid grid-cols-10 gap-1.5">
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold" title="Task 1: Done">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold" title="Task 2: Done">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold" title="Task 3: Done">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold" title="Task 4: Done">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold" title="Task 5: Done">✓</span>
+<span class="h-6 rounded bg-surface-container-highest" title="Task 6: Open"></span>
+<span class="h-6 rounded bg-surface-container-highest" title="Task 7: Open"></span>
+<span class="h-6 rounded bg-error flex items-center justify-center text-[10px] text-on-error font-bold" title="Task 8: Overdue">!</span>
+<span class="h-6 rounded bg-error flex items-center justify-center text-[10px] text-on-error font-bold" title="Task 9: Overdue">!</span>
+<span class="h-6 rounded bg-error flex items-center justify-center text-[10px] text-on-error font-bold" title="Task 10: Overdue">!</span>
+</div>
+</div>
+<!-- Metric summary badges -->
+<div class="mt-4 grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-error">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Overdue</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-on-surface">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Open</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-primary">72%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">On-Time</span>
+</div>
+</div>
+<!-- Expand open commitments preview -->
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Oldest: Auth v2 Migration API</span>
+<button class="text-primary hover:text-primary-fixed text-label-sm font-label-sm font-medium flex items-center gap-0.5 shrink-0" type="button">
+                Details <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Anika Rao (Needs Attention) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close up executive portrait of an Indian female Product Manager in an ultra-modern dimly lit office, neon ultraviolet reflections, confident expression, sharp tailored jacket." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqSU3tOg9i01eaXatRlh6Ek9exsvuHP4_iVlQzaCxuoP5Q2rEsJbzxpRVdsdH5Y6sxj5GMdnElrcxTaU3P6lpv5iU6q2oqDxpMSSvvA6EcjMECwmr8fCL31NXcxCrh__J9x8NgbVXlDfCUtWPc-BEt_eoyfWuKwRCcTOUYrdCbixjkE0nj4GO9CwJNh7rTBr8y-VAxAH-fEwjwP9Lj5HejO2FMpxzxHL4g2OlwXXDNsPHHw7meB5945Q"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-surface-container-low"></span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Anika Rao</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Product Lead</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-tertiary bg-tertiary/10 font-label-sm text-label-sm uppercase font-bold tracking-wider">Needs Attention</span>
+</div>
+<!-- Big Stat & Trend -->
+<div class="mt-4 flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">6/10</span>
+<span class="font-label-md text-label-md text-on-surface-variant">tasks completed (60%)</span>
+</div>
+<span class="flex items-center text-tertiary font-code-sm text-code-sm font-semibold">
+                ▼ 4 pts
+              </span>
+</div>
+<!-- 60% Progress Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 60%"></div>
+</div>
+<!-- 10 Task Micro-Matrix: 6 green, 3 grey, 1 red -->
+<div class="mt-4 pt-3 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Last 10 meeting commitments</span>
+<div class="grid grid-cols-10 gap-1.5">
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-surface-container-highest"></span>
+<span class="h-6 rounded bg-surface-container-highest"></span>
+<span class="h-6 rounded bg-surface-container-highest"></span>
+<span class="h-6 rounded bg-error flex items-center justify-center text-[10px] text-on-error font-bold">!</span>
+</div>
+</div>
+<!-- Metric summary badges -->
+<div class="mt-4 grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-error">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Overdue</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-on-surface">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Open</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-primary">85%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">On-Time</span>
+</div>
+</div>
+<!-- Expand preview -->
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Roadmap Spec review overdue by 2d</span>
+<button class="text-primary hover:text-primary-fixed text-label-sm font-label-sm font-medium flex items-center gap-0.5 shrink-0" type="button">
+                Details <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Dev Patel (On Track) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young male software architect in a sleek black hoodie with dark ambient studio lighting, subtle purple reflections, confident and sharp aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmXtF_D5KyRhB0-qM9J6__T17Yg0hOdwU04tIURlFu2rtW1sBcA2NpwrQxCDIGphQCnlY9fan9oCTkieXuweGmioi7v-1NI5FGI0oZAX8XlOZ--blPZp1Fnx0gfovpcpya0wcEgu7jB2aqrvuBaMSh-v5FQbPcNkRE9hbHIAzpVXZWdN6W5SB8cXhVMFrHk7plp4AJ1oLzWMm407EvHz0KiTgjtcPWzjlAgLHHlbFXNMxqpEIHCk-Tgg"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-secondary ring-2 ring-surface-container-low"></span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Dev Patel</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Backend Engineer</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-secondary bg-secondary/10 font-label-sm text-label-sm uppercase font-bold tracking-wider">On Track</span>
+</div>
+<!-- Big Stat & Trend -->
+<div class="mt-4 flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">9/10</span>
+<span class="font-label-md text-label-md text-on-surface-variant">tasks completed (90%)</span>
+</div>
+<span class="flex items-center text-secondary font-code-sm text-code-sm font-semibold">
+                ▲ 12 pts
+              </span>
+</div>
+<!-- 90% Progress Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 90%"></div>
+</div>
+<!-- 10 Task Micro-Matrix: 9 green, 1 grey, 0 red -->
+<div class="mt-4 pt-3 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Last 10 meeting commitments</span>
+<div class="grid grid-cols-10 gap-1.5">
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-surface-container-highest"></span>
+</div>
+</div>
+<!-- Metric summary badges -->
+<div class="mt-4 grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-on-surface">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Overdue</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-on-surface">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Open</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-secondary">95%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">On-Time</span>
+</div>
+</div>
+<!-- Expand preview -->
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Pending: ClickHouse partition query</span>
+<button class="text-primary hover:text-primary-fixed text-label-sm font-label-sm font-medium flex items-center gap-0.5 shrink-0" type="button">
+                Details <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Samira Khan (On Track) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="High-fashion studio portrait of a woman UX designer with artistic lighting, deep violet rim lights, subtle creative minimalist background, intelligent focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqfLwMPn0DHXSoWvGNdArckfDmgGh2cB59W6Wsg9R7AazWxjJZQGRNl03xT2glZ3CUa1wBePCJlOSkPZGpYJaLyH09hIRKkzo_spsu_0RGm9JcR3N3tZFlOt8UNy9PFFeKCAru49JcA7mWXugGPHuOhfU7el8Vt6OKeh2KLKVQJPPz8d4dZUMDuQzOSI9Zr4Q0ZLL4Wdzc-tlflR7ijmCfWGXDlVAjq8gWow7uH6XHP-qNhezmwrkLoA"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-secondary ring-2 ring-surface-container-low"></span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Samira Khan</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">UX Designer</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-secondary bg-secondary/10 font-label-sm text-label-sm uppercase font-bold tracking-wider">On Track</span>
+</div>
+<!-- Big Stat & Trend -->
+<div class="mt-4 flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">8/10</span>
+<span class="font-label-md text-label-md text-on-surface-variant">tasks completed (80%)</span>
+</div>
+<span class="flex items-center text-on-surface-variant font-code-sm text-code-sm font-semibold">
+                ▲ 2 pts
+              </span>
+</div>
+<!-- 80% Progress Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 80%"></div>
+</div>
+<!-- 10 Task Micro-Matrix: 8 green, 2 grey, 0 red -->
+<div class="mt-4 pt-3 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Last 10 meeting commitments</span>
+<div class="grid grid-cols-10 gap-1.5">
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-surface font-bold">✓</span>
+<span class="h-6 rounded bg-surface-container-highest"></span>
+<span class="h-6 rounded bg-surface-container-highest"></span>
+</div>
+</div>
+<!-- Metric summary badges -->
+<div class="mt-4 grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-on-surface">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Overdue</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-on-surface">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Open</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-semibold text-secondary">91%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">On-Time</span>
+</div>
+</div>
+<!-- Expand preview -->
+<div class="mt-3 flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">In Progress: Design token dark theme specs</span>
+<button class="text-primary hover:text-primary-fixed text-label-sm font-label-sm font-medium flex items-center gap-0.5 shrink-0" type="button">
+                Details <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Weekly Execution Distribution Inline Chart Card -->
+<div class="p-5 rounded-2xl bg-surface-container-low flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Transcript Extraction vs Delivery Velocity</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Total action items parsed from audio streams over the last 6 calendar weeks.</p>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span> Done on-time</span>
+<span class="flex items-center gap-1.5 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-error"></span> Overdue / Slipped</span>
+</div>
+</div>
+<!-- Inline SVG Distribution Chart -->
+<div class="w-full h-32 pt-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 600 100">
+<!-- Grid lines -->
+<line class="text-surface-variant" opacity="0.4" stroke="currentColor" stroke-dasharray="3 3" x1="0" x2="600" y1="20" y2="20"></line>
+<line class="text-surface-variant" opacity="0.4" stroke="currentColor" stroke-dasharray="3 3" x1="0" x2="600" y1="50" y2="50"></line>
+<line class="text-surface-variant" opacity="0.4" stroke="currentColor" stroke-dasharray="3 3" x1="0" x2="600" y1="80" y2="80"></line>
+<!-- Week 1 -->
+<rect fill="#7c3aed" height="48" opacity="0.85" rx="4" width="28" x="35" y="42"></rect>
+<rect fill="#ffb4ab" height="8" opacity="0.9" rx="2" width="28" x="35" y="32"></rect>
+<!-- Week 2 -->
+<rect fill="#7c3aed" height="60" opacity="0.85" rx="4" width="28" x="135" y="30"></rect>
+<rect fill="#ffb4ab" height="5" opacity="0.9" rx="2" width="28" x="135" y="24"></rect>
+<!-- Week 3 -->
+<rect fill="#7c3aed" height="68" opacity="0.95" rx="4" width="28" x="235" y="22"></rect>
+<rect fill="#ffb4ab" height="6" opacity="0.9" rx="2" width="28" x="235" y="15"></rect>
+<!-- Week 4 -->
+<rect fill="#7c3aed" height="52" opacity="0.85" rx="4" width="28" x="335" y="38"></rect>
+<rect fill="#ffb4ab" height="10" opacity="0.9" rx="2" width="28" x="335" y="26"></rect>
+<!-- Week 5 -->
+<rect fill="#7c3aed" height="70" opacity="0.95" rx="4" width="28" x="435" y="20"></rect>
+<rect fill="#ffb4ab" height="7" opacity="0.9" rx="2" width="28" x="435" y="12"></rect>
+<!-- Week 6 (Current) -->
+<rect fill="#d2bbff" height="72" rx="4" width="28" x="535" y="18"></rect>
+<rect fill="#ffb4ab" height="5" rx="2" width="28" x="535" y="12"></rect>
+</svg>
+</div>
+<div class="flex justify-between px-6 font-code-sm text-code-sm text-outline">
+<span>W36 (Aug 18)</span>
+<span>W37 (Aug 25)</span>
+<span>W38 (Sep 01)</span>
+<span>W39 (Sep 08)</span>
+<span>W40 (Sep 15)</span>
+<span class="text-primary font-semibold">W41 (Active)</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar Operational Modules (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Module 1: Awaiting Your Approval (3) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Awaiting Your Approval</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-code-sm text-code-sm font-semibold">3 items</span>
+</div>
+<div class="flex flex-col gap-2.5 mt-2" id="approval-tasks-list">
+<!-- Task 1 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest gap-2.5 hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-2">
+<span class="font-body-sm text-body-sm font-medium text-on-surface leading-snug">Push WebSocket failover cluster to staging</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm whitespace-nowrap">98% conf</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-5 h-5 rounded-full object-cover" data-alt="Male engineer avatar in high contrast minimalist studio shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo_vwbwvb1n2C9Q70aWejceodIvXQqntCkyJ5hcHNWIkOrD7edaOB26sPSjGfZ7jm1GXVN9csFUWA1LsRQzBetmpPkpYmKRWVVggWz7dWFv7ptDB0hp2ajRjmRNUYWLLhrmou-ErYLvB6pAD3jcCfVW8ZUMoYlGvIrAFvGWLTb1miU5jkeGN1Z32TWMmYxKWSw1tcyh5S6q9YmiemCy4Xht4UmXxe8ZlTgiIPrTX978sEuC2yKrfPMTw"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dev Patel</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2 py-0.5 rounded text-error hover:bg-error-container/20 text-label-sm font-label-sm font-medium transition-all" type="button">Reject</button>
+<button class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary-container hover:bg-primary-container/80 text-label-sm font-label-sm font-semibold transition-all" type="button">Approve</button>
+</div>
+</div>
+</div>
+<!-- Task 2 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest gap-2.5 hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-2">
+<span class="font-body-sm text-body-sm font-medium text-on-surface leading-snug">Finalize enterprise seats pricing tier matrix</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm whitespace-nowrap">92% conf</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-5 h-5 rounded-full object-cover" data-alt="Female product executive avatar in dark ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChwheseTE5BEs3R75pB7EGLBUV6GdeMuG-wTbZ4y1XnAmuTEWxTyhWh8cy8ZIynLOe-pA0sVz0BnjifH8glh_BqwF0zv2IND6js47hfBhgRZUtGA8JNnfMhRhjDH8MWcU9ucX9RV3RBfBKDOgBKOggBQDLUWMy259fEkJWxABwMn5SpPgkQBj6KvsaP2GekuGAjfwvS8dgdG_eufuKCJHMN7AEkZwtKZX0r6E-U0z3b8hlzk5_mYOAgg"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Anika Rao</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2 py-0.5 rounded text-error hover:bg-error-container/20 text-label-sm font-label-sm font-medium transition-all" type="button">Reject</button>
+<button class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary-container hover:bg-primary-container/80 text-label-sm font-label-sm font-semibold transition-all" type="button">Approve</button>
+</div>
+</div>
+</div>
+<!-- Task 3 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest gap-2.5 hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-2">
+<span class="font-body-sm text-body-sm font-medium text-on-surface leading-snug">Sanitize customer telemetry for HIPAA compliance</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-code-sm text-code-sm whitespace-nowrap">89% conf</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-5 h-5 rounded-full object-cover" data-alt="Senior developer avatar portrait with dark ambient rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtFtZQcl026GoLlwLEpVG0As4kpIrPJnQu_SjqoINrpJxzaplW-nYR00e6aYIEgykQ0IyjZuhAF7ZP_MYnXWcbV39Mlw7MI7KkuHVMI90e2VuWJ-TthpQPinteQSbrbYnhyUbDkXQN1-nTnVqm8JF-pdZXixVIEFYuBpxAz0FDrR08-sVjWb3RJR6G47FIzLh28sNYfSWS_t4sfMHDG-a_KCjS5v1UfOlEes4UyDKsZS4yFaj-kmq8Pw"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rahul Sharma</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2 py-0.5 rounded text-error hover:bg-error-container/20 text-label-sm font-label-sm font-medium transition-all" type="button">Reject</button>
+<button class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary-container hover:bg-primary-container/80 text-label-sm font-label-sm font-semibold transition-all" type="button">Approve</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 2: Due in Next 7 Days (4) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low">
+<div class="flex items-center justify-between pb-3">
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Due in Next 7 Days</h2>
+<span class="font-label-sm text-label-sm text-outline">Upcoming syncs</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Row 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Migrate auth tokens to Ed25519</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rahul Sharma • Platform Core</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container/20 text-error font-code-sm text-code-sm font-semibold shrink-0">In 24h</span>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Executive slide deck for Board meeting</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Anika Rao • Strategy</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm shrink-0">In 2d</span>
+</div>
+<!-- Row 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Complete user testing interviews for v3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Samira Khan • UX Lab</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm shrink-0">In 4d</span>
+</div>
+<!-- Row 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Deploy memory profile agent on ingestion node</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dev Patel • Infra</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm shrink-0">In 6d</span>
+</div>
+</div>
+</div>
+<!-- Module 3: Risks Raised (2) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low">
+<div class="flex items-center justify-between pb-3">
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">crisis_alert</span>
+              Risks Raised
+            </h2>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm uppercase font-semibold">2 Critical</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Risk 1 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary uppercase tracking-wider">Compliance Risk</span>
+<span class="font-code-sm text-code-sm text-outline">Meeting #104</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">SOC2 timeline buffer squeezed by 6 days due to third-party penetration testing audit lag.</p>
+<div class="flex items-center justify-between mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Raised by: Elena Vance</span>
+<span class="text-tertiary font-medium">Mitigation Assigned →</span>
+</div>
+</div>
+<!-- Risk 2 -->
+<div class="p-3 rounded-xl bg-surface-container-lowest flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-error uppercase tracking-wider">Infrastructure Dependency</span>
+<span class="font-code-sm text-code-sm text-outline">Meeting #102</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Token API stability degrades under 15k concurrent transcript streaming requests.</p>
+<div class="flex items-center justify-between mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Raised by: Dev Patel</span>
+<span class="text-error font-medium">Action Overdue →</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Module 4: Recent Meetings Health (Audit Feed) -->
+<div class="flex flex-col p-5 rounded-2xl bg-surface-container-low">
+<div class="flex items-center justify-between pb-3">
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Recent Meetings Health</h2>
+<button class="text-primary hover:underline text-label-sm font-label-sm font-medium" type="button">All 10</button>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Meeting 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Sprint 43 Planning &amp; Commit</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today, 10:00 AM • 45m</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">6/6 done</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- Meeting 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Executive Architecture Sync</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday • 60m</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">4/6 done</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<!-- Meeting 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Customer Retrospective - FinTech Corp</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sep 24 • 30m</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-code-sm text-code-sm text-error font-semibold">2/5 flagged</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+</div>
+<!-- Meeting 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-lowest">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+</div>
+<div class="flex flex-col truncate">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Weekly All-Hands &amp; KPI Review</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sep 22 • 50m</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">8/8 done</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interaction handles for the lookback window control
+  const windowButtons = document.querySelectorAll('#window-selector button');
+  windowButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      windowButtons.forEach(b => {
+        b.className = 'px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all';
+      });
+      btn.className = 'px-3 py-1 rounded bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all';
+    });
+  });
+
+  // Filter pills interaction
+  const filterPills = document.querySelectorAll('#member-filter-pills button');
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.className = 'px-3 py-1 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors';
+      });
+      pill.className = 'px-3 py-1 rounded-lg bg-surface-container-highest text-primary font-label-md text-label-md font-semibold';
+    });
+  });
+
+  // Quick Approval Micro-interaction
+  const approveButtons = document.querySelectorAll('#approval-tasks-list button');
+  approveButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const card = e.target.closest('.hover\\:bg-surface-container');
+      if (card && btn.textContent.trim() === 'Approve') {
+        card.style.transition = 'all 0.3s ease';
+        card.style.opacity = '0.4';
+        card.style.transform = 'scale(0.98)';
+        btn.textContent = 'Approved';
+        btn.classList.remove('bg-primary-container', 'text-on-primary-container');
+        btn.classList.add('bg-secondary', 'text-surface');
+      }
+    });
+  });
+</script></main><div class="fixed bottom-6 right-6 z-50 flex items-center"><button aria-label="Open Team Chat" class="group relative flex items-center justify-center w-12 h-12 rounded-full bg-primary-container text-on-primary-container shadow-[0_8px_24px_-4px_rgba(124,58,237,0.5)] hover:shadow-[0_0_20px_rgba(124,58,237,0.7)] hover:scale-105 transition-all focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">chat_bubble</span><span class="absolute -top-1 -right-1 flex h-3.5 w-3.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-primary border-2 border-surface-container-lowest"></span></span></button></div></body></html>

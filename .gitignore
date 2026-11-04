@@ -1,0 +1,31 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/meetingos.db
+
+# Environment variables — NEVER commit this
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+desktop.ini
+# Secrets — NEVER commit these
+**/.env
+**/.env.local
+backend/firebase-service-account.json
+*service-account*.json
+
+# macOS
+.DS_Store
+
+# Test caches
+.pytest_cache/
