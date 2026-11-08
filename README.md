@@ -20,6 +20,8 @@ Cognition MeetingOS takes a Google Meet transcript and runs it through a **CrewA
 
 Every extracted item carries the **verbatim transcript quote** it came from, so nothing reaches employees that wasn't actually said.
 
+> **Status:** not deployed yet. Run it locally with the steps in [Getting started](#getting-started); the [Deployment](#deployment) section describes the planned Vercel + Render + Firebase setup.
+
 ## Contents
 [Architecture](#architecture) · [Agent pipeline](#the-agent-pipeline) · [Roles and security](#roles-and-security-model) · [Design](#design) · [Getting started](#getting-started) · [Deployment](#deployment) · [Screenshots](#screenshots) · [Roadmap](#roadmap)
 

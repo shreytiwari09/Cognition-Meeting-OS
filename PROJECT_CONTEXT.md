@@ -1,6 +1,6 @@
 # Cognition MeetingOS: Project Context
 
-_Last updated: 2026-09-30. Describes the code as it is on `main` (after the security and agent-pipeline overhaul)._
+_Last updated: 2026-11-08. Describes the code as it is on `main` (after the security and agent-pipeline overhaul)._
 
 ## 1. What this is
 
@@ -50,7 +50,7 @@ backend/
     schemas.py            Pydantic outputs exchanged between agents
     pipeline.py           Deterministic logic: quote grounding, deadlines, owner match, confidence, assemble()
     crew.py               run_meeting_crew(): Crew 1 → assemble → Crew 2, per-step audit callback, graceful degradation
-  tests/                  76 pytest tests (no Firebase or LLM needed)
+  tests/                  104 pytest tests (no Firebase or LLM needed)
 frontend/src/
   App.jsx                 Routes; ProtectedRoute(allow=[roles]) wraps pages in AppShell; ErrorBoundary; 404
   api.js                  axios client; attaches Firebase ID token; all endpoint wrappers
@@ -239,12 +239,9 @@ Captures are saved to `chrome.storage.local` continuously, so a closed or crashe
 
 ## 9. Testing status
 
-- **Call-audio transcription:** 8 backend tests (`tests/test_transcription.py`: silence filtering, hints, name correction, endpoint auth and fallback), 7 extension tests (audio/caption merge, voiced-only filter), a real Whisper run on generated speech, and an end-to-end recorder run in headless Chrome against real Whisper.
-- **Latest batch (task acceptance, progress/reassign, add task, notifications, export, velocity, risk severity, durations, block capture):** 96 backend tests (incl. `tests/test_task_workflow.py`), 18 extension tests, and a headless-Chrome run of the extension against a fake Meet page (clean lines, revised text kept, "You" renamed, auto-upload on leave). Screens checked in dev preview mode. Not yet verified: a live Meet call and real Google sign-in against Firebase.
-
-- **Automated (76 backend + 8 extension tests, all passing):** extension token connect/use/revoke/expiry-on-role-loss; caption merging and speaker splitting (node); team performance stats and alerts (incl. the 6-of-10 case) and the `/analytics/team` endpoint; the owner → manager → team model end to end against an in-memory Firestore fake (`tests/fake_firestore.py`: registration, role-aware invites, joining, team management, meeting/task scoping, employee redaction, uploads), role enforcement on every privileged endpoint, quote grounding + guardrail, deadline resolution, owner matching, confidence rubric and breakdown, result assembly, automated audit checks, index guardrail, and the two-crew flow with stubbed LLM crews (including Crew 2 failing mid-run).
-- **Verified manually:** full 7-agent runs on a transcript with planted problems (`gemini-3.1-flash-lite`): tasks, owners and ISO deadlines correct; a vague task flagged and scored 55; a task contradicting a "hold" decision and a task given to someone who said they'd be out were both flagged (by the audit and validation agents; the audit agent's findings vary run to run); confidence notes agree with the score breakdown; decisions/risks separated; MoM generated. Frontend builds; backend serves `/health`, rejects unauthenticated calls (401), accepts CORS from the local web app.
-- **Not yet verified in a browser:** the new sign-up → create company → join with invite flow, PM role changes, the extension on a live Meet call, and the new UI (evidence quotes, decisions/risks panel).
+- **Automated (all passing):** 104 backend pytest tests and 25 extension tests (`node --test`). Backend coverage: extension token connect/use/revoke, call-audio transcription (silence filtering, hints, name correction, endpoint fallback), team performance stats and alerts (incl. the 6-of-10 case), the owner → manager → team model end to end against an in-memory Firestore fake (`tests/fake_firestore.py`), role enforcement on every privileged endpoint, quote grounding + guardrails, deadline resolution, owner matching, confidence rubric, result assembly, audit checks, the two-crew flow with stubbed LLM crews (including Crew 2 failing mid-run), and the task workflow (accept/decline, progress, reassign, manual tasks, notifications, CSV export). Extension coverage: caption merging, speaker splitting, audio/caption merge, voiced-only filter, script loading.
+- **Verified manually:** full 7-agent runs on a transcript with planted problems (`gemini-3.1-flash-lite`): correct tasks, owners and ISO deadlines; a vague task flagged; a task contradicting a "hold" decision and a task given to someone who said they'd be out were both flagged; decisions/risks separated; MoM generated. The extension was loaded in headless Chrome against a fake Meet page and Whisper was run on generated speech. Every frontend screen was checked in dev preview mode with sample data.
+- **Not verified:** a live Google Meet call with the extension, real Google sign-in against Firebase from a deployed domain, and any production deployment. **The app is not deployed yet.**
 
 ## 10. Known gaps and tech debt
 
